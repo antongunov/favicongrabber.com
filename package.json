@@ -10,6 +10,7 @@
     "start": "node -r dotenv/config server/server.js"
   },
   "dependencies": {
-    "dotenv": "^4.0.0"
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3"
   }
 }
