@@ -1,0 +1,15 @@
+{
+  "name": "favicongrabber",
+  "version": "0.1.0",
+  "description": "A simple tool to grab favicons",
+  "repository": "https://github.com/antongunov/favicongrabber.git",
+  "private": true,
+  "author": "Anton Gunov <anton@gunov.name>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node -r dotenv/config server/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0"
+  }
+}
