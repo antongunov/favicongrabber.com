@@ -1,0 +1,11 @@
+{
+  "verbose": true,
+  "watch": [
+    "server/",
+    ".env"
+  ],
+  "execMap": {
+    "env": "npm start"
+  },
+  "ext": "js env"
+}
