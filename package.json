@@ -7,7 +7,7 @@
   "author": "Anton Gunov <anton@gunov.name>",
   "license": "MIT",
   "scripts": {
-    "start": "node -r dotenv/config server/server.js"
+    "start": "node -r dotenv/config server/"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
