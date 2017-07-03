@@ -4,7 +4,7 @@
 
 const express = require('express');
 
-const api = require('./api');
+const api = require('./api/router');
 
 const server = express();
 const NODE_PORT = parseInt(process.env.NODE_PORT, 10);

@@ -2,10 +2,19 @@
   "name": "favicongrabber",
   "version": "0.1.0",
   "description": "A simple tool to grab favicons",
-  "repository": "https://github.com/antongunov/favicongrabber.git",
   "private": true,
-  "author": "Anton Gunov <anton@gunov.name>",
+  "author": {
+    "name": "Anton Gunov",
+    "email": "anton@gunov.name"
+  },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antongunov/favicongrabber.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antongunov/favicongrabber/issues"
+  },
   "scripts": {
     "start": "node -r dotenv/config server/"
   },
