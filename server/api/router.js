@@ -2,7 +2,7 @@ const router = require('express').Router();
 const grabber = require('./grabber');
 
 router.param('domain', (req, res, next, domain) => {
-  // TODO Validate `domain` property
+  // TODO: validate `domain` property
   req.domain = domain;
   return next();
 });
@@ -22,6 +22,7 @@ router.use((req, res) => {
 
 router.use((err, req, res, next) => {
   /* eslint no-unused-vars: off */
+  // console.error(err);
   res.status(500).json({
     error: 'General API error',
   });
