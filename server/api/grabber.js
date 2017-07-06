@@ -1,5 +1,12 @@
+const request = require('request');
+
 module.exports = (domain, done) => {
-  return done(null, {
-    domain
+  const uri = `http://${domain}/`;
+  request(uri, (err, res, body) => {
+    /* eslint no-unused-vars: off */
+    if (err) return done(err);
+    return done(null, {
+      domain,
+    });
   });
 };

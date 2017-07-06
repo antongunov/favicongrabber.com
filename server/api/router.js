@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const grabber = require('./grabber');
 
-
 router.param('domain', (req, res, next, domain) => {
-  console.log(`req.domain = ${req.domain}`);
+  // TODO Validate `domain` property
   req.domain = domain;
   return next();
 });
 
-router.get('/grab/:domain', (req, res) => {
+router.get('/grab/:domain', (req, res, next) => {
   grabber(req.domain, (err, data) => {
+    if (err) return next(err);
     res.status(200).json(data);
   });
 });

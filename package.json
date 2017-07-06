@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "dotenv": "^4.0.0",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "request": "^2.81.0"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
