@@ -1,0 +1,9 @@
+[
+  "link[rel='icon']",
+  "link[rel='shortcut icon']",
+  "link[rel='apple-touch-icon']",
+  "link[rel='apple-touch-icon-precomposed']",
+  "link[rel='apple-touch-startup-image']",
+  "link[rel='mask-icon']",
+  "link[rel='fluid-icon']"
+]

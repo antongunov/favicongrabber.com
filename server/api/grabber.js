@@ -2,16 +2,13 @@ const request = require('request');
 const cheerio = require('cheerio');
 const resolve = require('url').resolve;
 
-const selectors = [
-  'link[rel="icon"]',
-];
+const selectors = require('./selectors.json');
 
 module.exports = (domain, done) => {
   const uri = `http://${domain}/`;
   const icons = [];
 
   request(uri, (err, res, body) => {
-    /* eslint no-unused-vars: off */
     if (err) return done(err);
 
     const $ = cheerio.load(body);
@@ -28,9 +25,11 @@ module.exports = (domain, done) => {
       });
     });
 
-    return done(null, {
+    const data = {
       domain,
       icons,
-    });
+    };
+
+    return done(null, data);
   });
 };
