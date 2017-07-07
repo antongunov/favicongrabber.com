@@ -1,0 +1,11 @@
+{
+  "domain": "digitalocean.com",
+  "icons": [
+    {
+      "src": "https://www.digitalocean.com/favicon-97c70234.png"
+    },
+    {
+      "src": "https://www.digitalocean.com/apple-touch-icon.png"
+    }
+  ]
+}
