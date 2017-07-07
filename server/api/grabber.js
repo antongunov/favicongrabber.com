@@ -2,7 +2,15 @@ const request = require('request');
 const cheerio = require('cheerio');
 const { URL } = require('url');
 
-const selectors = require('./selectors.json');
+const selectors = require('./selectors.json').link;
+const { version } = require('../../package.json');
+
+const baseRequest = request.defaults({
+  headers: {
+    'User-Agent': `FaviconGrabber/${version}`,
+    'Accept': '*/*',
+  }
+});
 
 const grabPage = (baseUrl, page, done) => {
   const $ = cheerio.load(page);
@@ -31,7 +39,7 @@ const grabPage = (baseUrl, page, done) => {
 const loadPage = (domain, done) => {
   let baseUrl = `http://${domain}/`;
 
-  request(baseUrl, (err, res, page) => {
+  baseRequest(baseUrl, (err, res, page) => {
     if (err) return done(err);
     // TODO: check `res.statusCode`
 
@@ -45,6 +53,7 @@ const loadPage = (domain, done) => {
         domain,
         icons,
       };
+
       return done(null, data);
     });
   });
