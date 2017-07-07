@@ -7,6 +7,14 @@ const favicon = require('./favicon');
 const browserconfig = require('./browserconfig');
 const links = require('./links');
 
+const grab = (fn, $) => {
+  return (cb) => {
+    fn($, (err, icons) => {
+      cb(err, icons);
+    });
+  }
+};
+
 module.exports = (url, done) => {
   baseRequest(url, (err, res, page) => {
     if (err) return done(err);
@@ -19,21 +27,9 @@ module.exports = (url, done) => {
     let icons = links($);
 
     parallel([
-      (cb) => {
-        manifest($, (err, icons) => {
-          cb(err, icons);
-        });
-      },
-      (cb) => {
-        favicon($, (err, icons) => {
-          cb(err, icons);
-        });
-      },
-      (cb) => {
-        browserconfig($, (err, icons) => {
-          cb(err, icons);
-        });
-      },
+      grab(manifest, $),
+      grab(favicon, $),
+      grab(browserconfig, $),
     ], (err, results) => {
       // ignore errors
       results.forEach(arr => icons = [...icons, ...arr]);

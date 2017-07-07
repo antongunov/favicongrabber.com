@@ -9,7 +9,16 @@ router.param('domain', (req, res, next, domain) => {
 
 router.get('/grab/:domain', (req, res, next) => {
   grabber(req.domain, (err, data) => {
-    if (err) return next(err);
+    if (err) {
+      switch (err.code) {
+        case 'ENOTFOUND':
+          return res.status(422).json({
+            error: 'The unresolved domain name'
+          });
+        default:
+          return next(err);
+      }
+    }
     res.status(200).json(data);
   });
 });
