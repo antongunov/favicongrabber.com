@@ -1,0 +1,18 @@
+{
+  "domain": "udacity.com",
+  "icons": [
+    {
+      "sizes": "any",
+      "src": "https://d125fmws0bore1.cloudfront.net/assets/udacity_apple_icon-b2fe0e8bc834963f1cf490fdc55bc3170b37f05374e1e4b383af1d755d1893db.png"
+    },
+    {
+      "src": "https://d125fmws0bore1.cloudfront.net/assets/favicon-3867f43151ecbff486335ae6a96d17d91d6169d20888131b4681d15b65e1425b.ico"
+    },
+    {
+      "src": "https://d125fmws0bore1.cloudfront.net/assets/udacity_apple_icon-b2fe0e8bc834963f1cf490fdc55bc3170b37f05374e1e4b383af1d755d1893db.png"
+    },
+    {
+      "src": "https://d125fmws0bore1.cloudfront.net/assets/udacity_share-46db4b8faf075a5af5a1070a7fa0ad3639783609ff45f447e4ea467fe3aa9d32.png"
+    }
+  ]
+}
