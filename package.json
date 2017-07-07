@@ -16,7 +16,8 @@
     "url": "https://github.com/antongunov/favicongrabber/issues"
   },
   "scripts": {
-    "start": "node -r dotenv/config server/"
+    "start": "node -r dotenv/config server/",
+    "test": "mocha -r dotenv/config --timeout 3000 tests/**/*.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
@@ -27,6 +28,8 @@
   "devDependencies": {
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.6.1"
+    "eslint-plugin-import": "^2.6.1",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
   }
 }
