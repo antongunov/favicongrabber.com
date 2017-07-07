@@ -7,11 +7,11 @@ const selectors = [
   "link[rel='apple-touch-icon-precomposed']",
   "link[rel='apple-touch-startup-image']",
   "link[rel='mask-icon']",
-  "link[rel='fluid-icon']"
+  "link[rel='fluid-icon']",
 ];
 
 module.exports = ($) => {
-  let icons = [];
+  const icons = [];
 
   selectors.forEach((selector) => {
     $(selector, 'head').each((i, elem) => {

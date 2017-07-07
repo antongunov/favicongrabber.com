@@ -6,6 +6,16 @@
     },
     {
       "src": "https://www.digitalocean.com/apple-touch-icon.png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "http://assets.digitalocean.com/favicon.ico",
+      "type": "image/png"
+    },
+    {
+      "sizes": "180x180",
+      "src": "https://www.digitalocean.com/apple-touch-icon.png",
+      "type": "image/png"
     }
   ]
 }

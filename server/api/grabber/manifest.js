@@ -18,7 +18,7 @@ module.exports = ($, done) => {
       if (err) return done;
     }
 
-    let icons = [];
+    const icons = [];
     if (data.icons) {
       data.icons.forEach(icon => icons.push({
         sizes: icon.sizes,

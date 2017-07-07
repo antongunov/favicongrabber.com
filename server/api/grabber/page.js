@@ -36,7 +36,7 @@ module.exports = (url, done) => {
       },
     ], (err, results) => {
       // ignore errors
-      results.forEach(icons_ => icons.concat(icons_));
+      results.forEach(arr => icons = [...icons, ...arr]);
       return done(null, icons);
     });
   });
