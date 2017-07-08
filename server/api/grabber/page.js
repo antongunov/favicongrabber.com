@@ -1,4 +1,4 @@
-const baseRequest = require('../base-request');
+const baseRequest = require('./base-request');
 const cheerio = require('cheerio');
 const parallel = require('async/parallel');
 

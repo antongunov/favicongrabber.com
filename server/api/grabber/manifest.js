@@ -1,4 +1,4 @@
-const baseRequest = require('../base-request');
+const baseRequest = require('./base-request');
 const URL = require('url').URL;
 
 module.exports = ($, done) => {

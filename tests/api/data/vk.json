@@ -1,0 +1,23 @@
+{
+  "domain": "vk.com",
+  "icons": [
+    {
+      "src": "https://vk.com/images/icons/favicons/fav_logo.ico?5"
+    },
+    {
+      "src": "https://vk.com/images/safari_60.png?1"
+    },
+    {
+      "sizes": "76x76",
+      "src": "https://vk.com/images/safari_76.png?1"
+    },
+    {
+      "sizes": "120x120",
+      "src": "https://vk.com/images/safari_120.png?1"
+    },
+    {
+      "sizes": "152x152",
+      "src": "https://vk.com/images/safari_152.png?1"
+    }
+  ]
+}
