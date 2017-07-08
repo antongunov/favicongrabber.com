@@ -19,7 +19,8 @@ module.exports = (url, done) => {
   baseRequest(url, (err, res, page) => {
     if (err) return done(err);
 
-    // TODO: check a status code
+    // TODO: add a helpful error message for a user
+    if (res.statusCode !== 200) return done(null, []);
 
     const $ = cheerio.load(page);
     $.baseUrl = `${res.request.uri.protocol}//${res.request.uri.hostname}`;

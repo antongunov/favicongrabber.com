@@ -8,14 +8,15 @@ module.exports = ($, done) => {
   const url = href[0] === '/' ? new URL(href, $.baseUrl).href : href;
   baseRequest(url, (err, res, manifest) => {
     // ignore errors
-    if (err) return done;
+    if (err) return done(null, []);
+    if (res.statusCode !== 200) return done(null, []);
 
     let data = {};
     try {
       data = JSON.parse(manifest);
     } catch (err) {
       // ignore errors
-      if (err) return done;
+      if (err) return done(null, []);
     }
 
     const icons = [];
