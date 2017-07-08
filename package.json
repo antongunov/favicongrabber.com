@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "node -r dotenv/config server/",
-    "test": "mocha -r dotenv/config --timeout 5000 tests/**/*.js"
+    "test": "mocha -r dotenv/config --timeout 7000 tests/**/*.js"
   },
   "dependencies": {
     "async": "^2.5.0",

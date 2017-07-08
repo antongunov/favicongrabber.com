@@ -9,4 +9,5 @@ module.exports = request.defaults({
   },
   // follow HTTP 3xx responses as redirects
   followRedirect: true,
+  timeout: 5000,
 });

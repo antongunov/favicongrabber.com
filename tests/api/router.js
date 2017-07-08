@@ -14,11 +14,20 @@ describe('API router', () => {
       .end(done);
   });
 
-  it('Unresolved domain name', (done) => {
+  it('Unresolved domain', (done) => {
     request
       .get('/api/grab/unresolved-domain.foobar')
-      .expect(422, {
-        error: 'The unresolved domain name',
+      .expect(400, {
+        error: 'Unresolved domain name',
+      })
+      .end(done);
+  });
+
+  it('Server timeout', (done) => {
+    request
+      .get('/api/grab/8.8.8.8')
+      .expect(400, {
+        error: 'Connection to server of domain timeout',
       })
       .end(done);
   });

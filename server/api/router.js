@@ -12,8 +12,12 @@ router.get('/grab/:domain', (req, res, next) => {
     if (err) {
       switch (err.code) {
         case 'ENOTFOUND':
-          return res.status(422).json({
-            error: 'The unresolved domain name'
+          return res.status(400).json({
+            error: 'Unresolved domain name'
+          });
+        case 'ETIMEDOUT':
+          return res.status(400).json({
+            error: 'Connection to server of domain timeout'
           });
         default:
           return next(err);
@@ -31,7 +35,7 @@ router.use((req, res) => {
 
 router.use((err, req, res, next) => {
   /* eslint no-unused-vars: off */
-  // console.error(err);
+  console.error(err);
   res.status(500).json({
     error: 'General API error',
   });
