@@ -1,0 +1,7 @@
+server {
+  server_name {{NGINX_FQDN}};
+
+  location / {
+    proxy_pass http://localhost:{{NODE_PORT}}/;
+  }
+}

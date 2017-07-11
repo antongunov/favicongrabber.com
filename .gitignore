@@ -3,3 +3,5 @@ build/
 node_modules/
 
 .env
+
+config/nginx/server.nginx

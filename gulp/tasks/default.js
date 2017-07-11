@@ -8,6 +8,7 @@ gulp.task('default:production', gulp.series(
   'clean',
   gulp.parallel(
     'copy',
+    'nginx:conf',
     'pug',
     'sass'
   )
@@ -17,6 +18,7 @@ gulp.task('default:development', gulp.series(
   'clean',
   gulp.parallel(
     'copy',
+    'nginx:conf',
     'pug',
     'sass'
   ),

@@ -10,6 +10,7 @@ require('dotenv').config();
 
 require('./gulp/tasks/browser-sync');
 require('./gulp/tasks/clean');
+require('./gulp/tasks/nginx');
 require('./gulp/tasks/copy');
 require('./gulp/tasks/pug');
 require('./gulp/tasks/sass');
