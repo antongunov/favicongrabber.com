@@ -1,0 +1,12 @@
+extends assets/pug/page
+
+block data
+  - var title = "API | Favicon Grabber"
+
+block body
+  .page-wrapper
+    .header
+    .content
+      article.content-article.article.article--marked
+        include:markdown-it(linkify) ../api/README.md
+    .footer

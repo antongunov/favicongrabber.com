@@ -12,9 +12,7 @@ The root endpoint for the API is http://favicongrabber.com/api/
 GET /api/grab/:domain
 ```
 
-For instance, to grab favicons of GitHub's index page:
-
-http://favicongrabber.com/api/grab/github.com
+For instance, to grab favicons of GitHub's index page open http://favicongrabber.com/api/grab/github.com in your browser:
 
 ```json
 {

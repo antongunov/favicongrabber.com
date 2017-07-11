@@ -16,9 +16,9 @@ describe('API router', () => {
 
   it('Unresolved domain', (done) => {
     request
-      .get('/api/grab/unresolved-domain.test')
+      .get('/api/grab/example.test')
       .expect(400, {
-        error: 'Unresolved domain "unresolved-domain.test"',
+        error: 'Unresolved domain "example.test"',
       })
       .end(done);
   });
