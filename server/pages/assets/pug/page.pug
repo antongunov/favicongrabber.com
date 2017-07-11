@@ -1,0 +1,16 @@
+block data
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title
+    block head
+    link(rel="stylesheet" href="/assets/css/main.css")
+    script(src="/assets/js/app.js" defer)
+  body
+    block body
+    if env.GA_ID
+      include google-analytics

@@ -1,0 +1,16 @@
+# https://github.com/ai/browserslist
+
+Last 2 versions
+
+# Desktop browsers
+Chrome >= 34
+Edge >= 12
+Explorer >= 10
+Firefox >= 30
+Opera >= 23
+Safari >= 7
+
+# Mobile browsers
+Android >= 4
+BlackBerry >= 10
+iOS >= 7

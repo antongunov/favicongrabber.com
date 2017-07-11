@@ -1,0 +1,8 @@
+mixin love-by(name, href)
+  .love-by
+    | Coded with love by
+    |
+    if href
+      a(href= href).love-by__link= name
+    else
+      = name
