@@ -16,9 +16,9 @@ describe('API router', () => {
 
   it('Unresolved domain', (done) => {
     request
-      .get('/api/grab/unresolved-domain.foobar')
+      .get('/api/grab/unresolved-domain.test')
       .expect(400, {
-        error: 'Unresolved domain name',
+        error: 'Unresolved domain "unresolved-domain.test"',
       })
       .end(done);
   });
@@ -27,7 +27,7 @@ describe('API router', () => {
     request
       .get('/api/grab/8.8.8.8')
       .expect(400, {
-        error: 'Connection to server of domain timeout',
+        error: 'Connection to server of domain "8.8.8.8" timeout',
       })
       .end(done);
   });

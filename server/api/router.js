@@ -13,11 +13,11 @@ router.get('/grab/:domain', (req, res, next) => {
       switch (err.code) {
         case 'ENOTFOUND':
           return res.status(400).json({
-            error: 'Unresolved domain name'
+            error: `Unresolved domain "${req.domain}"`,
           });
         case 'ETIMEDOUT':
           return res.status(400).json({
-            error: 'Connection to server of domain timeout'
+            error: `Connection to server of domain "${req.domain}" timeout`,
           });
         default:
           return next(err);
