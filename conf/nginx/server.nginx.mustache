@@ -1,0 +1,22 @@
+server {
+  server_name {{env.NGINX_FQDN}};
+
+  root {{&rootDir}}/build/;
+
+  location /assets {
+    try_files $uri =404;
+  }
+
+  location = / {
+    # try_files /home.html =404;
+    return 302 http://{{env.NGINX_FQDN}}/api-reference;
+  }
+
+  location = /api-reference {
+    try_files /api.html =404;
+  }
+
+  location /api {
+    proxy_pass http://localhost:{{env.NODE_PORT}}/api;
+  }
+}

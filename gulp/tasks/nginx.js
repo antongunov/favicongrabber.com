@@ -2,7 +2,8 @@ const gulp = require('gulp');
 const fs = require('fs');
 const render = require('mustache').render;
 
-const nginxDir = 'config/nginx';
+const nginxConf = require('../../conf/nginx.conf');
+const nginxDir = 'conf/nginx';
 
 /**
  * Gulp tasks
@@ -11,7 +12,10 @@ const nginxDir = 'config/nginx';
 gulp.task('nginx:conf', (done) => {
   fs.readFile(`${nginxDir}/server.nginx.mustache`, 'utf-8', (err, template) => {
     if (err) return done(err);
-    const nginxConf = render(template, process.env);
-    return fs.writeFile(`${nginxDir}/server.nginx`, nginxConf, err => done(err));
+    const serverNginx = render(template, nginxConf);
+    return fs.writeFile(`${nginxDir}/server.nginx`, serverNginx, (err) => {
+      if (err) return done(err);
+      return done();
+    });
   });
 });
