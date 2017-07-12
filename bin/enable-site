@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+NGINX_CONF=/etc/nginx
+
+SITE_HOME=`cd $(dirname $0)/.. && pwd`
+SITE_NAME=`basename $SITE_HOME`
+
+sudo ln -s $SITE_HOME/conf/nginx/server.nginx $NGINX_CONF/sites-enabled/$SITE_NAME

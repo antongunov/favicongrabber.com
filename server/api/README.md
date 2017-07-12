@@ -4,7 +4,7 @@ All responses are returned as JSON over HTTP.
 
 ## Root Endpoint
 
-The root endpoint for the API is http://favicongrabber.com/api/
+The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true)
 
 ## Grab
 
@@ -12,7 +12,7 @@ The root endpoint for the API is http://favicongrabber.com/api/
 GET /api/grab/:domain
 ```
 
-For instance, to grab favicons of GitHub's index page open http://favicongrabber.com/api/grab/github.com in your browser:
+For instance, to grab favicons of GitHub's index page open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your browser:
 
 ```json
 {
@@ -30,6 +30,14 @@ For instance, to grab favicons of GitHub's index page open http://favicongrabber
     }
   ]
 }
+```
+
+## Optional Parameters
+
+JSON in a pretty way:
+
+```
+GET /api?pretty=true
 ```
 
 ## Errors
