@@ -1,6 +1,16 @@
 const router = require('express').Router();
 const grabber = require('./grabber');
 
+/**
+ * JSON in a pretty way
+ */
+
+router.all('/*', (req, res, next) => {
+  const indent = req.query.pretty === 'true' ? 2 : 0;
+  req.app.set('json spaces', indent);
+  return next();
+});
+
 router.param('domain', (req, res, next, domain) => {
   // TODO: validate `domain` property
   req.domain = domain;
