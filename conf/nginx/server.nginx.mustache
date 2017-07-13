@@ -9,11 +9,11 @@ server {
 
   location = / {
     # try_files /home.html =404;
-    return 302 http://{{env.NGINX_FQDN}}/api-reference;
+    return 302 http://{{env.NGINX_FQDN}}/service-api-reference;
   }
 
-  location = /api-reference {
-    try_files /api.html =404;
+  location = /service-api-reference {
+    try_files /service-api-reference.html =404;
   }
 
   location /api {

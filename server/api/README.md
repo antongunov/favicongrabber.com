@@ -1,46 +1,42 @@
-# API
+# Service API reference
 
 All responses are returned as JSON over HTTP.
 
-## Root Endpoint
+## Root endpoint
 
-The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true)
+The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true).
 
-## Grab
+## Grab favicons
 
-```
+```http
 GET /api/grab/:domain
 ```
 
-For instance, to grab favicons of GitHub's index page open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your browser:
+For instance, to grab favicons of GitHub's index page open [/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your browser:
 
 ```json
 {
   "domain": "github.com",
-  "icons": [
-    {
+  "icons": [{
       "src": "https://assets-cdn.github.com/favicon.ico",
       "type": "image/x-icon"
-    },
-    {
+    }, {
       "src": "https://assets-cdn.github.com/pinned-octocat.svg"
-    },
-    {
+    }, {
       "src": "https://github.com/fluidicon.png"
-    }
-  ]
+    }]
 }
 ```
 
-## Optional Parameters
+## Optional parameters
 
 JSON in a pretty way:
 
-```
+```http
 GET /api?pretty=true
 ```
 
-## Errors
+## Error handling
 
 Error messages have the following format:
 
