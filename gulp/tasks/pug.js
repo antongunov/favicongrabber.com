@@ -8,6 +8,16 @@ const pug = require('gulp-pug');
 const { log, colors } = require('gulp-util');
 
 /**
+ * Pug filters
+ */
+
+const markdownItPrismFilter = require('../../server/lib/pug-filter-markdown-it-prism');
+
+const filters = {
+  'markdown-it-prism': markdownItPrismFilter,
+};
+
+/**
  * Log errors nicely
  */
 
@@ -28,6 +38,7 @@ const logError = end => (err) => {
 
 gulp.task('pug', done => gulp.src('server/pages/*.pug')
     .pipe(pug({
+      filters,
       data: {
         env: process.env,
       },

@@ -1,5 +1,7 @@
 # Service API reference
 
+## Overview
+
 All responses are returned as JSON over HTTP.
 
 ## Root endpoint

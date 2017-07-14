@@ -24,7 +24,8 @@
     "cheerio": "^1.0.0-rc.2",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
-    "jstransformer-markdown-it": "^2.0.0",
+    "markdown-it": "^8.3.1",
+    "markdown-it-prism": "^1.1.1",
     "request": "^2.81.0"
   },
   "devDependencies": {
