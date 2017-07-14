@@ -36,12 +36,18 @@ const logError = end => (err) => {
  */
 
 gulp.task('sass', done => gulp.src('server/pages/assets/sass/main.scss')
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: [
+        'node_modules/font-awesome/scss',
+      ]
+    }))
     .on('error', logError(done))
     .pipe(postcss([
       normalize(),
       fontMagician({
-        hosted: ['server/pages/assets/fonts/'],
+        hosted: [
+          'server/pages/assets/fonts/',
+        ],
       }),
       autoprefixer({
         cascade: false,
