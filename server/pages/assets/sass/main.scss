@@ -2,11 +2,11 @@
 
 @import-normalize;
 
-@import "utils/variables";
+@import 'utils/variables';
 
-@import "base/base";
-@import "base/typography";
+@import 'base/base';
+@import 'base/typography';
 
-@import "../blocks/blocks";
+@import '../blocks/blocks';
 
-@import "font-awesome";
+@import 'font-awesome';
