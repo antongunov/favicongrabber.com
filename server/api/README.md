@@ -19,14 +19,18 @@ For instance, to grab favicons from GitHub's index page open [/api/grab/github.c
 ```json
 {
   "domain": "github.com",
-  "icons": [{
+  "icons": [
+    {
       "src": "https://assets-cdn.github.com/favicon.ico",
       "type": "image/x-icon"
-    }, {
+    },
+    {
       "src": "https://assets-cdn.github.com/pinned-octocat.svg"
-    }, {
+    },
+    {
       "src": "https://github.com/fluidicon.png"
-    }]
+    }
+  ]
 }
 ```
 
