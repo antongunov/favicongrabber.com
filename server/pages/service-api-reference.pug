@@ -2,11 +2,14 @@ extends assets/pug/page
 
 block data
   - var title = "Service API reference | Favicon Grabber"
+  - var lastUpdated = "17 July 2017"
 
 block body
   .page.page__wrapper
     header.page__header.header
     main.page__main.main
       article.article.article--marked
+        .article__last-updated
+          +last-updated(lastUpdated)
         include:markdown-it-prism(linkify) ../api/README.md
     footer.page__footer.footer

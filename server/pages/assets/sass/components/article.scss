@@ -12,4 +12,11 @@
       margin: 1.5rem 0 1rem 0;
     }
   }
+  &__last-updated {
+    position: absolute;
+    color: lighten($color-black, 30);
+    font-size: .8rem;
+    margin-left: .3rem;
+    top: 6.3rem;
+  }
 }
