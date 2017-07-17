@@ -9,7 +9,10 @@
 
 @import 'components/article';
 
-@import 'layouts/content';
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';
 
 @import 'vendors/prism';
 

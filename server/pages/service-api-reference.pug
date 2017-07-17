@@ -4,9 +4,9 @@ block data
   - var title = "Service API reference | Favicon Grabber"
 
 block body
-  .page-wrapper
-    .header
-    .content
+  .page.page__wrapper
+    header.page__header.header
+    main.page__main.main
       article.article.article--marked
         include:markdown-it-prism(linkify) ../api/README.md
-    .footer
+    footer.page__footer.footer
