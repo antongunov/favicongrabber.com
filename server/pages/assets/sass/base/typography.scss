@@ -1,11 +1,29 @@
 html {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 body {
   color: $color-black;
-  font-family: Nunito, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $font-stack-text;
   font-size: 1rem;
+  text-rendering: optimizelegibility;
+}
+
+h1, h2, h3, h4 {
+  color: darken($color-black, 10);
+}
+
+p {
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+a {
+  border-bottom: 1px dotted;
+  color: darken($color-primary, 10);
+  text-decoration: none;
+  &:hover {
+    border-bottom: 1px solid;
+  }
 }

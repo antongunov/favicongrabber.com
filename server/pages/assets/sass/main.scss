@@ -7,6 +7,10 @@
 @import 'base/base';
 @import 'base/typography';
 
-@import '../blocks/blocks';
+@import 'components/article';
+
+@import 'layouts/content';
+
+@import 'vendors/prism';
 
 @import 'font-awesome';

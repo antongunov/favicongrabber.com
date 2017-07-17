@@ -1,7 +1,10 @@
-$color-black: #333333;
+$color-black: #444;
 $color-green: #7bbb5f;
 $color-pink: #ea4c8a;
 $color-purple: #8d7bb7;
 
 $color-primary: $color-purple;
-$color-secondary: $color-purple;
+$color-secondary: $color-green;
+
+$font-stack-text: Nunito, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-stack-code: 'Droid Sans Mono', Consolas, monospace;

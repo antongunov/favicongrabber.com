@@ -1,0 +1,37 @@
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #ededed;
+  font-family: $font-stack-code;
+  font-size: 15px;
+  line-height: 1.5;
+  tab-size: 2;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+}
+
+pre[class*="language-"] {
+  border-radius: .3rem;
+  overflow: auto;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background-color: #2d2832;
+}
+
+.token.punctuation {
+  color: #ededed;
+}
+
+.token.property {
+  color: #96cbfe;
+}
+
+.token.string {
+  color: #a8ff60;
+}
+
+.token.operator {
+  color: #ededed;
+}
