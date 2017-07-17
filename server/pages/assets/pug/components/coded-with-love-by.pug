@@ -1,0 +1,14 @@
+mixin coded-with-love-by(name, href)
+  .coded-with-love-by
+    i.fa.fa-code
+    +space
+    | with
+    +space
+    i.fa.fa-heart.coded-with-love-by--color-red
+    +space
+    | by
+    +space
+    if href
+      a(href= href).coded-with-love-by__link= name
+    else
+      = name

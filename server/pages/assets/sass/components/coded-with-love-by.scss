@@ -1,0 +1,10 @@
+.coded-with-love-by {
+  &--color-red {
+    color: $color-red;
+  }
+  &__link {
+    color: $color-black;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
