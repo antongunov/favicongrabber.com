@@ -2,19 +2,17 @@
 
 ## Overview
 
-All responses are returned as JSON over HTTP.
+[Favicon Grabber](http://favicongrabber.com/) API is simple and has the one endpoint. The API doesn't require authentication but has restrictions: 100 requests per minute from one IP address and each API request should specify a valid `User-Agent` header.
 
-## Root endpoint
+The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true) and all responses are returned as JSON(P) over HTTP.
 
-The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true).
+The API supports requests and responses using [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) so you can send [XHR](https://en.wikipedia.org/wiki/XMLHttpRequest)-requests from browsers using JavaScript served from any domain.
 
 ## Grab favicons
 
-```http
-GET /api/grab/:domain
-```
+In order to grab favicons for a website send `GET`-request to API endpoint `/api/grab/:domain`, where `:domain` is a required parameter that should be equal the valid [domain name syntax](https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax). 
 
-For instance, to grab favicons from GitHub's index page open [/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your browser:
+For instance, to grab favicons from [GitHub](https://github.com/)'s index page open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON-response:
 
 ```json
 {
@@ -34,17 +32,24 @@ For instance, to grab favicons from GitHub's index page open [/api/grab/github.c
 }
 ```
 
-## Optional parameters
+Property `domain` contains the value of `:domain` parameter. The array `icons` contains array `icon` objects and may be empty. Any `icon` object can have three properties the values of which are strings.
 
-JSON in a pretty way:
+Description properties of `icon` object:
 
-```http
-GET /api?pretty=true
-```
+* property `src` contains absolute URL for a favicon image and is required and unique;
+* property `type` equals an [MIME-type](https://en.wikipedia.org/wiki/Media_type)'s favicon image;
+* property `sizes` contains size's favicon image in the format that particulars described on [W3C page](https://www.w3.org/TR/2011/WD-html5-20110113/links.html#attr-link-sizes), in a simple case property `sizes` has the following format: `HEIGHTxWIDTH` in pixels.
+
+## Optional API parameters
+
+There are two optional API parameters:
+
+* `pretty=true` for formatting JSON-response;
+* `callback=done` for [JSONP](https://en.wikipedia.org/wiki/JSONP)-response, where `done` is a variant of name the JSONP-function.
 
 ## Error handling
 
-Error messages have the following format:
+The API uses HTTP response codes to indicate API errors. All error messages have the following format:
 
 ```json
 {
