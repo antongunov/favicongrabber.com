@@ -2,21 +2,26 @@
   &--marked {
     h1 {
       color: $color-primary;
-      font-size: 3rem;
-      font-weight: 600;
+      font-size: 3.2rem;
+      font-weight: 700;
       margin-bottom: 3rem;
     }
     h2 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin: 1.5rem 0 1rem 0;
+      font-size: 1.9rem;
+      font-weight: 600;
+      margin: 2rem 0 1rem 0;
+    }
+    :not(pre) > code {
+      font-family: $font-stack-text;
+      font-weight: bold;
+      white-space: nowrap;
     }
   }
   &__last-updated {
     position: absolute;
     color: lighten($color-black, 30);
-    font-size: .8rem;
+    font-size: .9rem;
     margin-left: .5rem;
-    top: 9.5rem;
+    top: 10rem;
   }
 }

@@ -9,14 +9,13 @@
       text-decoration: none;
     }
     i {
-      color: $color-primary;
+      color: $color-black;
       margin: 1rem 4rem 0 0;
       cursor: pointer;
-      opacity: .7;
       transition: all .3s ease-in-out;
       width: 3rem;
       &:hover{
-        opacity: 1;
+        color: $color-primary;
       }
     }
   }

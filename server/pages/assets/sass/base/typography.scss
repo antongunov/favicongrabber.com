@@ -15,15 +15,31 @@ h1, h2, h3, h4 {
 
 p {
   font-weight: 400;
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1.65rem;
 }
 
 a {
   border-bottom: 1px dotted;
   color: darken($color-primary, 10);
   text-decoration: none;
+  white-space: nowrap;
   &:hover {
     border-bottom: 1px solid;
   }
+}
+
+ul {
+  margin-bottom: 1.65rem;
+}
+
+li {
+  line-height: 1.65;
+  margin-bottom: .6rem;
+}
+
+::selection {
+  background-color: $color-black;
+  color:#fff;
+  text-shadow:0 0 transparent;
 }
