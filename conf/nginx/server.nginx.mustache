@@ -1,5 +1,6 @@
 server {
   server_name {{env.NGINX_FQDN}};
+  listen {{env.NGINX_PORT}};
 
   root {{&rootDir}}/build/;
 
@@ -17,6 +18,7 @@ server {
   }
 
   location /api {
+    include {{&rootDir}}/conf/nginx/snippets/cors.nginx;
     proxy_pass http://localhost:{{env.NODE_PORT}}/api;
   }
 }

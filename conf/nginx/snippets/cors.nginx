@@ -1,0 +1,18 @@
+# CORS configuration
+
+# if a request is a preflight request
+if ($request_method = OPTIONS) {
+  add_header Access-Control-Allow-Origin *;
+  add_header Access-Control-Allow-Credentials false;
+  add_header Access-Control-Allow-Methods "DELETE, GET, PATCH, POST, PUT";
+  add_header Access-Control-Allow-Headers "Accept-Encoding, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since";
+  # cache preflight value for one day
+  add_header Access-Control-Max-Age 86400;
+
+  # no content
+  add_header Content-Length 0;
+  return 204;
+}
+
+add_header Access-Control-Allow-Origin * always;
+add_header Access-Control-Allow-Credentials false always;

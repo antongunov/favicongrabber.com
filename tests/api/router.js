@@ -32,7 +32,7 @@ describe('API router', () => {
       .end(done);
   });
 
-  it('JSONP', (done) => {
+  it('Support for JSONP response', (done) => {
     request
       .get('/api/grab/example.test?callback=done')
       .expect(400, '/**/ typeof done === \'function\' && done({"error":"Unresolved domain \\"example.test\\""});')

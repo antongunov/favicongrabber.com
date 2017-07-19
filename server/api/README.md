@@ -6,13 +6,13 @@
 
 The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true) and all responses are returned as JSON(P) over HTTP.
 
-The API supports requests and responses using [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) so you can send [XHR](https://en.wikipedia.org/wiki/XMLHttpRequest)-requests from browsers using JavaScript served from any domain.
+The API supports requests and responses using [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) so you can send [XHR](https://en.wikipedia.org/wiki/XMLHttpRequest) requests from browsers using a client-side web application served from any domain.
 
 ## Grab favicons
 
-In order to grab favicons for a website send `GET`-request to API endpoint `/api/grab/:domain`, where `:domain` is a required parameter that should be equal the valid [domain name syntax](https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax). 
+In order to grab favicons for a website send `GET` request to API endpoint `/api/grab/:domain`, where `:domain` is a required parameter that should be equal the valid [domain name syntax](https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax). 
 
-For instance, to grab favicons from [GitHub](https://github.com/)'s index page open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON-response:
+For instance, to grab favicons from [GitHub](https://github.com/)'s index page open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON response:
 
 ```json
 {
@@ -44,8 +44,8 @@ Description properties of `icon` object:
 
 There are two optional parameters for the API:
 
-* `pretty=true` for formatting JSON-response;
-* `callback=done` for [JSONP](https://en.wikipedia.org/wiki/JSONP)-response, where `done` is a variant of name the JSONP-function.
+* `pretty=true` for formatting JSON response;
+* `callback=done` for [JSONP](https://en.wikipedia.org/wiki/JSONP)-response, where `done` is a variant of name the JSONP function.
 
 ## Error handling
 
