@@ -1,6 +1,6 @@
 # Favicon Grabber
 
-A simple tool to grab favicons.
+[Favicon Grabber](http://favicongrabber.com/) is an online service to grab (retrieve) favicons from any domain.
 
 ## License
   
