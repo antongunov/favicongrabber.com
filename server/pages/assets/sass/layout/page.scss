@@ -1,6 +1,9 @@
 .page {
+  height: 100%;
   &__wrapper {
-
+    margin: 0 auto;
+    padding: 1rem 0;
+    width: 90%;
   }
   &__header {
 

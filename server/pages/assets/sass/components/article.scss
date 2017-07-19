@@ -1,4 +1,6 @@
 .article {
+  width: 780px;
+  margin: 0 auto;
   &--marked {
     h1 {
       color: $color-primary;
