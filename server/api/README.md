@@ -32,17 +32,17 @@ For instance, to grab favicons from [GitHub](https://github.com/)'s index page o
 }
 ```
 
-Property `domain` contains the value of `:domain` parameter. The array `icons` contains array `icon` objects and may be empty. Any `icon` object can have three properties the values of which are strings.
+Property `domain` contains the value of `:domain` parameter. The property `icons` contains an array of `icon` objects and may be empty. Any `icon` object can have three properties the values of which are strings.
 
 Description properties of `icon` object:
 
 * property `src` contains absolute URL for a favicon image and is required and unique;
 * property `type` equals an [MIME-type](https://en.wikipedia.org/wiki/Media_type)'s favicon image;
-* property `sizes` contains size's favicon image in the format that particulars described on [W3C page](https://www.w3.org/TR/2011/WD-html5-20110113/links.html#attr-link-sizes), in a simple case property `sizes` has the following format: `HEIGHTxWIDTH` in pixels.
+* property `sizes` contains size's favicon image and in a simple case has the following format (for a full description, see [W3C page](https://www.w3.org/TR/2011/WD-html5-20110113/links.html#attr-link-sizes)): `HEIGHTxWIDTH` in pixels. 
 
 ## Optional API parameters
 
-There are two optional API parameters:
+There are two optional parameters for the API:
 
 * `pretty=true` for formatting JSON-response;
 * `callback=done` for [JSONP](https://en.wikipedia.org/wiki/JSONP)-response, where `done` is a variant of name the JSONP-function.
