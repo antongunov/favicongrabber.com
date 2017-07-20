@@ -6,6 +6,10 @@ pre[class*="language-"] {
   line-height: 1.5;
   tab-size: 2;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+
+  @include media('<=desktop') {
+    font-size: 14px;
+  }
 }
 
 pre[class*="language-"] {

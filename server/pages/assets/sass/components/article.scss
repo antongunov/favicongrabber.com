@@ -1,17 +1,30 @@
 .article {
   width: 780px;
   margin: 0 auto;
+
+  @include media('<=tablet') {
+    width: auto;
+  }
+
   &--marked {
     h1 {
       color: $color-primary;
       font-size: 3.2rem;
       font-weight: 700;
       margin-bottom: 3rem;
+
+      @include media('<=tablet') {
+        font-size: 40px;
+      }
     }
     h2 {
       font-size: 1.9rem;
-      font-weight: 600;
+      font-weight: 500;
       margin: 2.1rem 0 1.1rem 0;
+
+      @include media('<=tablet') {
+        font-size: 28px;
+      }
     }
     :not(pre) > code {
       font-family: $font-stack-text;
@@ -24,6 +37,10 @@
     color: lighten($color-black, 30);
     font-size: .9rem;
     margin-left: .5rem;
-    top: 10rem;
+    top: 11em;
+
+    @include media('<=tablet') {
+      display: none;
+    }
   }
 }
