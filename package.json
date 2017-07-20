@@ -25,6 +25,7 @@
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "font-awesome": "^4.7.0",
+    "include-media": "^1.4.9",
     "markdown-it": "^8.3.1",
     "markdown-it-prism": "^1.1.1",
     "request": "^2.81.0"

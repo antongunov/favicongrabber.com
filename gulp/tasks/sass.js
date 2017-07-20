@@ -38,7 +38,7 @@ const logError = end => (err) => {
 gulp.task('sass', done => gulp.src('server/pages/assets/sass/main.scss')
     .pipe(sass({
       includePaths: [
-        'node_modules/font-awesome/scss',
+        'node_modules/',
       ]
     }))
     .on('error', logError(done))

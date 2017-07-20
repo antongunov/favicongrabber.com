@@ -1,5 +1,13 @@
 html {
   font-size: 20px;
+
+  @include media('<=desktop') {
+    font-size: 18px;
+  }
+
+  @include media('<=laptop') {
+    font-size: 16px;
+  }
 }
 
 body {

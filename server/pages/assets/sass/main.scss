@@ -2,6 +2,9 @@
 
 @import-normalize;
 
+@import 'include-media/dist/_include-media';
+@import 'font-awesome/scss/font-awesome';
+
 @import 'utils/variables';
 
 @import 'base/base';
@@ -16,5 +19,3 @@
 @import 'layout/footer';
 
 @import 'vendors/prism';
-
-@import 'font-awesome';

@@ -9,3 +9,10 @@ $color-secondary: $color-green;
 
 $font-stack-text: Nunito, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $font-stack-code: 'Droid Sans Mono', Consolas, monospace;
+
+$breakpoints: (
+  'desktop': 1200px,
+  'laptop': 992px,
+  'tablet': 768px,
+  'phone': 480px
+);
