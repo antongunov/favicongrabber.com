@@ -2,9 +2,9 @@
 
 [Favicon Grabber](http://favicongrabber.com/) is an online service to grab (retrieve) favicons from any domain.
 
-## The API
+## API
 
-There is simple public API. For example, to grab favicons from [DigitalOcean](https://digitalocean.com/)'s index page open [http://favicongrabber.com/api/grab/digitalocean.com](http://favicongrabber.com/api/grab/digitalocean.com?pretty=true) in your favorite browser:
+[Favicon Grabber](http://favicongrabber.com/) API is simple and has the one endpoint. For example, to grab favicons from [DigitalOcean](https://digitalocean.com/)'s index page open [http://favicongrabber.com/api/grab/digitalocean.com](http://favicongrabber.com/api/grab/digitalocean.com?pretty=true) in your favorite browser:
 
 ```json
 {

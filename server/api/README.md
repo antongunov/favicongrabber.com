@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Favicon Grabber](http://favicongrabber.com/) API is simple and has the one endpoint. The API doesn't require authentication but has restrictions: 100 requests per minute from one IP address and each API request should specify a valid `User-Agent` header.
+[Favicon Grabber](http://favicongrabber.com/) API is simple and has the one endpoint. The API does not require authentication but has restrictions: 100 requests per minute from one IP address and each API request should specify a valid `User-Agent` header.
 
 The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true) and all responses are returned as JSON(P) over HTTP.
 
