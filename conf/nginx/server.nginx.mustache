@@ -4,6 +4,8 @@ server {
 
   root {{&rootDir}}/build/;
 
+  include {{&confDir}}/snippets/favicon.nginx;
+
   location /assets {
     try_files $uri =404;
   }
@@ -18,7 +20,7 @@ server {
   }
 
   location /api {
-    include {{&rootDir}}/conf/nginx/snippets/cors.nginx;
+    include {{&confDir}}/snippets/cors.nginx;
     proxy_pass http://localhost:{{env.NODE_PORT}}/api;
   }
 }

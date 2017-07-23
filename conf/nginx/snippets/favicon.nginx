@@ -1,0 +1,11 @@
+# serving a favicon.ico
+
+location = /favicon.ico {
+  access_log off;
+  try_files /favicon.ico @empty_gif;
+}
+
+location @empty_gif {
+  # single-pixel transparent GIF
+  empty_gif;
+}
