@@ -1,18 +1,18 @@
 html {
-  font-size: 20px;
+  font-size: $text-font-size;
 
   @include media('<=desktop') {
-    font-size: 18px;
+    font-size: $text-font-size - 2px;
   }
 
   @include media('<=laptop') {
-    font-size: 16px;
+    font-size: $text-font-size - 4px;
   }
 }
 
 body {
   color: $color-black;
-  font-family: $font-stack-text;
+  font-family: $text-font-stack;
   font-size: 1rem;
   text-rendering: optimizelegibility;
 }
@@ -31,7 +31,7 @@ a {
   border-bottom: 1px dotted;
   color: darken($color-primary, 10);
   text-decoration: none;
-  white-space: nowrap;
+
   &:hover {
     border-bottom: 1px solid;
   }

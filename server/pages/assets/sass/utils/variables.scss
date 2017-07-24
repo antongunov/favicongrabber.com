@@ -8,8 +8,10 @@ $color-red: #d45d41;
 $color-primary: $color-blue;
 $color-secondary: $color-green;
 
-$font-stack-text: Nunito, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-stack-code: 'Droid Sans Mono', Consolas, monospace;
+$text-font-stack: Nunito, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$text-font-size: 20px;
+$code-font-stack: 'Droid Sans Mono', Consolas, monospace;
+$code-font-size: 15px;
 
 $breakpoints: (
   'desktop': 1200px,
