@@ -2,7 +2,7 @@
   width: 780px;
   margin: 0 auto;
 
-  @include media('<=tablet') {
+  @include media('<=laptop') {
     width: auto;
   }
 
@@ -14,24 +14,27 @@
       margin-bottom: 3rem;
 
       @include media('<=tablet') {
-        font-size: 40px;
+        font-size: 2.5rem;
       }
     }
+
     h2 {
       font-size: 1.9rem;
       font-weight: 500;
       margin: 2.1rem 0 1.1rem 0;
 
       @include media('<=tablet') {
-        font-size: 28px;
+        font-size: 1.75rem;
       }
     }
+
     :not(pre) > code {
       font-family: $text-font-stack;
       font-weight: bold;
       white-space: nowrap;
     }
   }
+
   &__last-updated {
     position: absolute;
     color: lighten($color-black, 30);

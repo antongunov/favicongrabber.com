@@ -13,10 +13,10 @@ pre[class*="language-"] {
 }
 
 pre[class*="language-"] {
-  border-radius: .3rem;
+  border-radius: 7px;
   overflow: auto;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: $code-font-size;
+  margin-bottom: $text-font-size * 1.65;
 }
 
 :not(pre) > code[class*="language-"],
