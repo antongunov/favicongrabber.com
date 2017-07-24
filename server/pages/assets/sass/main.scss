@@ -12,10 +12,12 @@
 
 @import 'components/article';
 @import 'components/coded-with-love-by';
+@import 'components/nav-link';
 
-@import 'layout/page';
+@import 'layout/footer';
 @import 'layout/header';
 @import 'layout/main';
-@import 'layout/footer';
+@import 'layout/nav';
+@import 'layout/page';
 
 @import 'vendors/prism';

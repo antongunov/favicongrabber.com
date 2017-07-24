@@ -1,0 +1,36 @@
+.nav-link {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  border: 2px solid $color-primary;
+  display: inline-block;
+  font-family: $font-stack-text;
+  font-weight: 400;
+  padding: .7rem 1.5rem .65rem;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  &:hover {
+    cursor: pointer;
+    transition: .3s;
+  }
+  &--style-1 {
+    border-color: #fff;
+    color: darken($color-primary, 10);
+    &:focus,
+    &:hover {
+      background-color: $color-primary;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+  }
+  &--style-2 {
+    border-color: $color-primary;
+    color: darken($color-primary, 10);
+    &:focus,
+    &:hover {
+      background-color: $color-primary;
+      border: 2px solid $color-primary;
+      color: #fff;
+    }
+  }
+}

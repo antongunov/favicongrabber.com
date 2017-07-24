@@ -37,7 +37,7 @@
     color: lighten($color-black, 30);
     font-size: .9rem;
     margin-left: .5rem;
-    top: 11em;
+    top: 11.5em;
 
     @include media('<=tablet') {
       display: none;

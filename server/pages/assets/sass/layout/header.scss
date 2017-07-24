@@ -1,21 +1,4 @@
 .header {
-  color: #fff;
   width: 100%;
   text-align: right;
-  &__icon {
-    a {
-      border: none;
-      color: #fff;
-      text-decoration: none;
-    }
-    i {
-      color: $color-black;
-      cursor: pointer;
-      transition: all .1s ease-in-out;
-      width: 3rem;
-      &:hover{
-        color: $color-primary;
-      }
-    }
-  }
 }
