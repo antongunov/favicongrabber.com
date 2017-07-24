@@ -1,14 +1,14 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: #ededed;
-  font-family: $font-stack-code;
-  font-size: 15px;
+  font-family: $code-font-stack;
+  font-size: $code-font-size;
   line-height: 1.5;
   tab-size: 2;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 
   @include media('<=desktop') {
-    font-size: 14px;
+    font-size: $code-font-size - 1px;
   }
 }
 
