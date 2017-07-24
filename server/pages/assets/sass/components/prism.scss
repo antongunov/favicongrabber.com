@@ -15,7 +15,7 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   border-radius: 7px;
   overflow: auto;
-  padding: $code-font-size;
+  padding: $code-font-size $code-font-size * 1.5;
   margin-bottom: $text-font-size * 1.65;
 }
 

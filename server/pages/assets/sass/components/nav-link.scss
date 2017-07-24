@@ -9,13 +9,16 @@
   text-align: center;
   text-decoration: none;
   text-rendering: optimizeLegibility;
+
   &:hover {
     cursor: pointer;
     transition: .3s;
   }
+
   &--style-1 {
     border-color: #fff;
     color: darken($color-primary, 10);
+
     &:focus,
     &:hover {
       background-color: $color-primary;
@@ -23,9 +26,11 @@
       color: #fff;
     }
   }
+
   &--style-2 {
     border-color: $color-primary;
     color: darken($color-primary, 10);
+
     &:focus,
     &:hover {
       background-color: $color-primary;
