@@ -1,10 +1,11 @@
 .nav-link {
-  background-color: #fff;
+  background-color: $color-white;
   border-radius: 1.5rem;
   border: 2px solid $color-primary;
   display: inline-block;
   font-family: $text-font-stack;
   font-weight: 400;
+  line-height: 1.15;
   padding: .7rem 1.5rem .65rem;
   text-align: center;
   text-decoration: none;
@@ -16,14 +17,15 @@
   }
 
   &--style-1 {
-    border-color: #fff;
-    color: darken($color-primary, 10);
+    background-color: $color-primary;
+    border-color: $color-white;
+    color: $color-white;
 
     &:focus,
     &:hover {
-      background-color: $color-primary;
-      border: 2px solid #fff;
-      color: #fff;
+      background-color: $color-white;
+      border: 2px solid $color-white;
+      color: darken($color-primary, 10);
     }
   }
 
@@ -35,7 +37,7 @@
     &:hover {
       background-color: $color-primary;
       border: 2px solid $color-primary;
-      color: #fff;
+      color: $color-white;
     }
   }
 }

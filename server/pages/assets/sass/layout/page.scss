@@ -2,8 +2,14 @@
   min-height: 100%;
 
   &__wrapper {
-    margin: 1rem auto;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 1rem 0 0;
     width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   &__header {
@@ -16,5 +22,9 @@
 
   &__footer {
     padding: 3em 0 2em;
+  }
+
+  &--color-primary {
+    background-color: $color-primary;
   }
 }
