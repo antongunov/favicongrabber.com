@@ -9,10 +9,8 @@ block body
       header.page__header.header
         nav.nav
           ul.nav__list
-            li.nav__item
-              a(href="http://favicongrabber.com/service-api-reference" title="Service API reference").nav-link.nav-link--style-1 API
-            li.nav__item
-              a(href="https://github.com/antongunov/favicongrabber" title="Fork me on GitHub" target="_blank").nav-link.nav-link--style-1 GitHub
+            li.nav__item: +nav-link-api
+            li.nav__item: +nav-link-github("style-1")
       main.page__main.main
       footer.page__footer.footer.footer--color-white
         +coded-with-love-by("Anton G.", "https://github.com/antongunov")

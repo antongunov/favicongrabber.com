@@ -9,8 +9,8 @@ block body
     header.page__header.header
       nav.nav
         ul.nav__list
-          li.nav__item
-            a(href="https://github.com/antongunov/favicongrabber" title="Fork me on GitHub" target="_blank").nav-link.nav-link--style-2 GitHub
+          li.nav__item.nav__item--left: +nav-link-home
+          li.nav__item: +nav-link-github("style-2")
     main.page__main.main
       article.article.article--marked
         .article__last-updated
