@@ -1,7 +1,18 @@
 extends assets/pug/page
 
 block data
-  - var title = "Home page"
+  - var title = "Favicon Grabber — Online service to grab (retrieve) favicons from any domain"
 
 block body
-  p Hi!
+  .page.page--color-primary
+    .page__wrapper
+      header.page__header.header
+        nav.nav
+          ul.nav__list
+            li.nav__item
+              a(href="http://favicongrabber.com/service-api-reference" title="Service API reference").nav-link.nav-link--style-1 API
+            li.nav__item
+              a(href="https://github.com/antongunov/favicongrabber" title="Fork me on GitHub" target="_blank").nav-link.nav-link--style-1 GitHub
+      main.page__main.main
+      footer.page__footer.footer.footer--color-white
+        +coded-with-love-by("Anton G.", "https://github.com/antongunov")
