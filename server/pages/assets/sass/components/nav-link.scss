@@ -5,6 +5,7 @@
   display: inline-block;
   font-family: $text-font-stack;
   font-weight: 400;
+  line-height: 1.15;
   padding: .7rem 1.5rem .65rem;
   text-align: center;
   text-decoration: none;
@@ -16,14 +17,15 @@
   }
 
   &--style-1 {
+    background-color: $color-primary;
     border-color: #fff;
-    color: darken($color-primary, 10);
+    color: #fff;
 
     &:focus,
     &:hover {
-      background-color: $color-primary;
+      background-color: #fff;
       border: 2px solid #fff;
-      color: #fff;
+      color: darken($color-primary, 10);
     }
   }
 
