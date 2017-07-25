@@ -1,5 +1,5 @@
 .nav-link {
-  background-color: #fff;
+  background-color: $color-white;
   border-radius: 1.5rem;
   border: 2px solid $color-primary;
   display: inline-block;
@@ -18,13 +18,13 @@
 
   &--style-1 {
     background-color: $color-primary;
-    border-color: #fff;
-    color: #fff;
+    border-color: $color-white;
+    color: $color-white;
 
     &:focus,
     &:hover {
-      background-color: #fff;
-      border: 2px solid #fff;
+      background-color: $color-white;
+      border: 2px solid $color-white;
       color: darken($color-primary, 10);
     }
   }
@@ -37,7 +37,7 @@
     &:hover {
       background-color: $color-primary;
       border: 2px solid $color-primary;
-      color: #fff;
+      color: $color-white;
     }
   }
 }
