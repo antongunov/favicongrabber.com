@@ -1,0 +1,13 @@
+# homepage
+
+location = / {
+  try_files /home.html =404;
+}
+
+location = /index {
+  return 301 /;
+}
+
+location = /home {
+  return 301 /;
+}

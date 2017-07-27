@@ -1,7 +1,7 @@
 {
   "name": "favicongrabber",
   "version": "0.1.0",
-  "description": "Online service to grab (retrieve) favicons from any domain",
+  "description": "Grabbing favicons from any domain",
   "private": true,
   "author": {
     "name": "Anton Gunov",

@@ -5,22 +5,11 @@ server {
   root {{&rootDir}}/build/;
 
   include {{&confDir}}/snippets/favicon.nginx;
-
-  location /assets {
-    try_files $uri =404;
-  }
-
-  location = / {
-    # try_files /home.html =404;
-    return 302 http://{{env.NGINX_FQDN}}/service-api-reference;
-  }
-
-  location = /service-api-reference {
-    try_files /service-api-reference.html =404;
-  }
+  include {{&confDir}}/snippets/home.nginx;
+  include {{&confDir}}/snippets/static.nginx;
 
   location /api {
-    include {{&confDir}}/snippets/cors.nginx;
+    include {{&confDir}}/snippets/enable-cors.nginx;
     proxy_pass http://localhost:{{env.NODE_PORT}}/api;
   }
 }

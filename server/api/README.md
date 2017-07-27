@@ -38,9 +38,9 @@ Description properties of `icon` object:
 
 * property `src` contains absolute URL for a favicon image and is required and unique;
 * property `type` equals an [MIME-type](https://en.wikipedia.org/wiki/Media_type)'s favicon image;
-* property `sizes` contains size's favicon image and in a simple case has the following format (for a full description, see [W3C page](https://www.w3.org/TR/2011/WD-html5-20110113/links.html#attr-link-sizes)): `HEIGHTxWIDTH` in pixels. 
+* property `sizes` contains size's favicon image and in a simple case has the following format: `HEIGHTxWIDTH` in pixels (for a full description, see [HTML5 Links](https://www.w3.org/TR/2011/WD-html5-20110113/links.html#attr-link-sizes)). 
 
-## Optional API parameters
+## Optional parameters
 
 There are two optional parameters for the API:
 
