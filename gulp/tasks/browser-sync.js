@@ -21,6 +21,9 @@ gulp.task('browser-sync:init', (done) => {
     server: {
       baseDir: 'build/',
       index: 'home.html',
+      serveStaticOptions: {
+        extensions: [ 'html', ]
+      }
     },
     open: false,
     ui: false,
