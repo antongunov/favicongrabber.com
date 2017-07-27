@@ -1,5 +1,11 @@
+@import 'domain-form';
+
 .app {
   &__title {
     color: $color-white;
+  }
+
+  &__domain-form {
+
   }
 }

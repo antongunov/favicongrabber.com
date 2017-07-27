@@ -1,0 +1,27 @@
+.domain-form {
+  color: $color-black;
+
+  &__input-domain {
+    font-family: inherit;
+    border-radius: 2px;
+    border-style: none;
+    color: inherit;
+    font-size: inherit;
+    padding: 0.5rem 1rem;
+    width: 16rem;
+  }
+
+  &__button-grab {
+    font-family: inherit;
+    background-color: $color-white;
+    border-radius: 2px;
+    border-style: none;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.17);
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 600;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+  }
+}

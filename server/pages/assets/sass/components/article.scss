@@ -29,7 +29,7 @@
     }
 
     :not(pre) > code {
-      font-family: $text-font-stack;
+      font-family: inherit;
       font-weight: bold;
       white-space: nowrap;
     }
