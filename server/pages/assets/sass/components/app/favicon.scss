@@ -1,0 +1,11 @@
+.favicon {
+  &__image {
+    max-width: 100%;
+  }
+
+  &__message {
+    &--info {
+      color: lighten($color-black, 10);
+    }
+  }
+}

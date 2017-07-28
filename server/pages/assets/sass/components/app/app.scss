@@ -1,4 +1,5 @@
 @import 'domain-form';
+@import 'favicon';
 
 .app {
   &__title {
@@ -6,6 +7,10 @@
   }
 
   &__domain-form {
+
+  }
+
+  &__favicon {
 
   }
 }

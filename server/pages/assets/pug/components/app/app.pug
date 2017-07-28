@@ -1,7 +1,10 @@
 include domain-form
+include favicon
 
 mixin app(title)
   .app
     h1.app__title= title
     .app_form
       +domain-form("domain-form")
+    .app_favicon
+      +favicon("favicon")
