@@ -5,9 +5,9 @@ include app/favicon
 mixin app(title)
   .app
     h1.app__title= title
-    .app_form-domain
+    .app__form-domain
       +form-domain("form-domain")
-    .app_message-error
+    .app__message-error
       +message-error("message-error")
-    .app_favicon
+    .app__favicon
       +favicon("favicon")
