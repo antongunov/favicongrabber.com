@@ -1,4 +1,4 @@
-const Controller = require('./modules/controller');
+const Controller = require('./controllers/modules/controller');
 
-require('./modules/message-error')(Controller);
-require('./modules/form-domain')(Controller);
+require('./controllers/errors-handler')(Controller);
+require('./controllers/grabber')(Controller);

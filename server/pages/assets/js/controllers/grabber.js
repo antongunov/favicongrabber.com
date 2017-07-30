@@ -1,31 +1,11 @@
-const request = require('./request');
-require('url-polyfill');
+const extractDomain = require('./modules/extract-domain');
+const request = require('./modules/request');
 
-module.exports = formDomain;
-
-function formDomain(Controller) {
+module.exports = (Controller) => {
   const ctrl = new Controller();
 
-  ctrl.extractDomain = function (value) {
-    let domain = null;
-    let url = null;
-
-    if (/[:@/]/.test(value)) {
-      try {
-        url = new URL(value);
-        domain = url.hostname;
-      } catch (err) {
-
-      }
-    } else {
-      domain = value;
-    }
-
-    return domain;
-  };
-
-  ctrl.tryItGrab = function () {
-    const inputDomain = ctrl.formDomain.querySelector('input[type="text"]');
+  ctrl.onTryItGrab = function () {
+    const inputDomain = ctrl.formDomainCmp.querySelector('input[type="text"]');
     const value = inputDomain.value;
 
     if (!value) {
@@ -33,7 +13,7 @@ function formDomain(Controller) {
       return false;
     }
 
-    const domain = ctrl.extractDomain(value);
+    const domain = extractDomain(value);
 
     if (!domain) {
       ctrl.$emit('error', 'This domain is invalid.');
@@ -42,7 +22,7 @@ function formDomain(Controller) {
 
     inputDomain.value = domain;
 
-    ctrl.$emit('begin-grabbing');
+    ctrl.$emit('grabber:begin-grabbing');
 
     request(`http://favicongrabber.com/api/grab/${domain}`, function (err, status, res) {
       if (err) {
@@ -53,7 +33,7 @@ function formDomain(Controller) {
 
       switch (status) {
         case 200:
-          ctrl.$emit('end-grabbing', res);
+          ctrl.$emit('grabber:end-grabbing', res.icons);
           break;
         case 500:
           ctrl.$emit('error', res.error);
@@ -68,8 +48,9 @@ function formDomain(Controller) {
     return false;
   };
 
-  ctrl.$load(function () {
-    ctrl.formDomain = document.querySelector('#form-domain');
-    ctrl.formDomain.onsubmit = ctrl.$proxy(ctrl.tryItGrab);
+  ctrl.$load(() => {
+    ctrl.formDomainCmp = document.querySelector('#form-domain');
+
+    ctrl.formDomainCmp.onsubmit = ctrl.$proxy(ctrl.onTryItGrab);
   });
-}
+};
