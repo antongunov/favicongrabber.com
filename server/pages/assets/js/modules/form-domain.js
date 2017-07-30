@@ -1,20 +1,19 @@
 require('url-polyfill');
 
-module.exports = domainForm;
+module.exports = formDomain;
 
-function domainForm (Controller) {
+function formDomain(Controller) {
   const ctrl = new Controller();
 
-  ctrl.domain = function () {
-    const domainInput = ctrl.domainForm.querySelector('input[type="text"]');
-    const value = domainInput.value;
+  ctrl.extractDomain = function () {
+    const inputDomain = ctrl.formDomain.querySelector('input[type="text"]');
+    const value = inputDomain.value;
 
     if (!value) return ctrl.$emit('error', 'No domain provided.');
 
     let domain = null;
     let url = null;
 
-    // TODO: how to improve parsing domain?
     if (/[:@/]/.test(value)) {
       try {
         url = new URL(value);
@@ -27,12 +26,14 @@ function domainForm (Controller) {
       domain = value;
     }
 
-    domainInput.value = domain;
+    inputDomain.value = domain;
     return domain;
   };
 
   ctrl.tryItGrab = function () {
-    const domain = ctrl.domain();
+    ctrl.$emit('begin-grabbing');
+
+    const domain = ctrl.extractDomain();
     console.log(domain);
 
     // prevent form submission
@@ -40,9 +41,7 @@ function domainForm (Controller) {
   };
 
   ctrl.$load(function () {
-    ctrl.domainForm = document.querySelector('#domain-form');
-    ctrl.domainForm.onsubmit = ctrl.$proxy(ctrl.tryItGrab);
-
-    ctrl.$on('error', msg => console.error(msg));
+    ctrl.formDomain = document.querySelector('#form-domain');
+    ctrl.formDomain.onsubmit = ctrl.$proxy(ctrl.tryItGrab);
   });
 }

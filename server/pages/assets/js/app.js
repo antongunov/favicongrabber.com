@@ -1,3 +1,4 @@
 const Controller = require('./modules/controller');
 
-require('./modules/domain-form')(Controller);
+require('./modules/message-error')(Controller);
+require('./modules/form-domain')(Controller);

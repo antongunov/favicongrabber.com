@@ -1,0 +1,13 @@
+include app/form-domain
+include app/message-error
+include app/favicon
+
+mixin app(title)
+  .app
+    h1.app__title= title
+    .app_form-domain
+      +form-domain("form-domain")
+    .app_message-error
+      +message-error("message-error")
+    .app_favicon
+      +favicon("favicon")

@@ -1,0 +1,21 @@
+@import 'app/form-domain';
+@import 'app/favicon';
+@import 'app/message-error';
+
+.app {
+  &__title {
+    color: $color-white;
+  }
+
+  &__form-domain {
+
+  }
+
+  &__message-error {
+    margin: 1rem;
+  }
+
+  &__favicon {
+
+  }
+}
