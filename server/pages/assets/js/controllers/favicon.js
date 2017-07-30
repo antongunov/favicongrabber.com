@@ -23,13 +23,11 @@ module.exports = (Controller) => {
   ctrl.initFaviconCmp = () => {
     return {
       image: document.querySelector('#favicon .favicon__image'),
-        type: document.querySelector('#favicon .favicon__type'),
-      sizes: document.querySelector('#favicon .favicon__sizes'),
+      meta: document.querySelector('#favicon .favicon__meta'),
 
       clear: function () {
         this.image.innerHTML = '';
-        this.type.textContent = '';
-        this.sizes.textContent = '';
+        this.meta.textContent = '';
       },
 
       update: function (image, icon) {
@@ -39,8 +37,12 @@ module.exports = (Controller) => {
           this.image.innerHTML = image;
         } else {
           this.image.appendChild(image);
-          // this.type.textContent = icon.type;
-          // this.sizes.textContent = icon.sizes;
+
+          if (icon.type && icon.sizes) {
+            this.meta.textContent = `${icon.type} • ${icon.sizes}`;
+          } else {
+            this.meta.textContent = icon.type || icon.sizes || '';
+          }
         }
       },
     };

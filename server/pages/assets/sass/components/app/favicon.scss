@@ -1,35 +1,28 @@
 .favicon {
   margin: 0 auto;
-  position: relative;
-  width: 16rem;
+  width: 12rem;
 
-  &__image {
+  &__image-wrapper {
     background-color: $color-white;
     border-radius: 5px;
     color: lighten($color-black, 30);
     height: 8rem;
     margin: 0 auto;
-    padding: 1rem;
+    position: relative;
     width: 8rem;
+  }
 
-    display: flex;
-    align-items: center;
+  &__image {
+    @include centered();
+    padding: 1rem;
 
     img {
-      @include centered();
-      max-width: 8rem - 1rem;
+      max-width: 8rem - 1rem * 2;
     }
   }
 
   &__meta {
-
-  }
-
-  &__type {
-
-  }
-
-  &__sizes {
-
+    color: $color-white;
+    margin: .7rem auto;
   }
 }

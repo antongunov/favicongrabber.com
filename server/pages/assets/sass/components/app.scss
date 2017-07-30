@@ -5,17 +5,18 @@
 .app {
   &__title {
     color: $color-white;
+    margin-bottom: 2rem;
   }
 
   &__form-domain {
-
+    margin-bottom: 1rem;
   }
 
   &__message-error {
-    margin: .5rem;
+    margin-bottom: 1rem;
   }
 
   &__favicon {
-
+    margin-bottom: 3rem;
   }
 }
