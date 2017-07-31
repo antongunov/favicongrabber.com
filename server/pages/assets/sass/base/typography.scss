@@ -5,7 +5,7 @@ html {
     font-size: $text-font-size - 2px;
   }
 
-  @include media('<=laptop') {
+  @include media('<=tablet') {
     font-size: $text-font-size - 4px;
   }
 }

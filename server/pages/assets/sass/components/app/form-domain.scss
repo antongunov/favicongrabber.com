@@ -1,27 +1,34 @@
 .form-domain {
   color: $color-black;
 
-  &__input-domain {
+  &__input-domain, &__button-grab {
     border-radius: 2px;
     border-style: none;
     color: inherit;
     font-family: inherit;
     font-size: inherit;
-    padding: 0.5rem 1rem;
+    margin: .5rem;
+    padding: .5rem 1rem;
+  }
+
+  &__input-domain {
     width: 16rem;
   }
 
   &__button-grab {
     background-color: $color-white;
-    border-radius: 2px;
-    border-style: none;
-    box-shadow: 0 2px rgba(0, 0, 0, 0.17);
-    color: inherit;
+    box-shadow: 0 2px rgba(0, 0, 0, .17);
     cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
     font-weight: 600;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
+
+    &:hover {
+      background-color: darken($color-white, 10);
+      transition: background-color .3s;
+    }
+
+    &:active {
+      box-shadow: 0 0 #fff;
+      transform: translateY(2px);
+    }
   }
 }
