@@ -1,0 +1,38 @@
+/*!
+ * Based on SpinKit v1.2.5 (http://tobiasahlin.com/spinkit/)
+ * Copyright (c) 2015 Tobias Ahlin
+ * Licensed under MIT (https://github.com/tobiasahlin/SpinKit/blob/master/LICENSE)
+ */
+
+.spinner {
+  height: 3rem;
+  margin: 0 auto;
+  position: relative;
+  width: 3rem;
+
+  &__double-bounce-1, &__double-bounce-2 {
+    background-color: $color-white;
+    border-radius: 50%;
+    height: 100%;
+    left: 0;
+    opacity: .6;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    animation: sk-bounce 2s infinite ease-in-out;
+  }
+
+  &__double-bounce-2 {
+    animation-delay: -1s;
+  }
+
+  @keyframes sk-bounce {
+    0%, 100% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  }
+}
