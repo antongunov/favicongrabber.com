@@ -38,6 +38,7 @@ module.exports = (Controller) => {
           ctrl.$emit('end-grabbing', res.icons);
           break;
         case 400:
+        case 422:
         case 500:
           ctrl.$emit('error', res.error);
           break;

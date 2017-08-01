@@ -29,6 +29,10 @@ router.get('/grab/:domain', (req, res, next) => {
           return res.status(400).jsonp({
             error: `Connection to server of domain "${req.domain}" timeout`,
           });
+        case 'EINVAL':
+          return res.status(422).jsonp({
+            error: `Invalid domain name "${req.domain}"`,
+          });
         default:
           return next(err);
       }
