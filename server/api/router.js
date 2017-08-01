@@ -26,6 +26,7 @@ router.get('/grab/:domain', (req, res, next) => {
             error: `Unresolved domain "${req.domain}"`,
           });
         case 'ETIMEDOUT':
+        case 'ESOCKETTIMEDOUT':
           return res.status(400).jsonp({
             error: `Connection to server of domain "${req.domain}" timeout`,
           });
