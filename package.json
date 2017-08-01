@@ -28,10 +28,14 @@
     "include-media": "^1.4.9",
     "markdown-it": "^8.3.1",
     "markdown-it-prism": "^1.1.1",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "url-polyfill": "^1.0.7"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.12",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
@@ -46,6 +50,7 @@
     "postcss-font-magician": "^2.0.0",
     "postcss-normalize": "^4.0.0",
     "rimraf": "^2.6.1",
-    "supertest": "^3.0.0"
+    "supertest": "^3.0.0",
+    "webpack": "^3.4.1"
   }
 }

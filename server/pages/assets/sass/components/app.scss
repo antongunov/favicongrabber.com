@@ -1,0 +1,21 @@
+@import 'app/domain-favicon';
+@import 'app/domain-form';
+
+.app {
+  &__title {
+    color: $color-white;
+    margin-bottom: 1.5rem;
+  }
+
+  &__domain-form {
+    margin-bottom: 1rem;
+  }
+
+  &__domain-favicon {
+    margin: 6rem auto 2rem;
+
+    @include media('<=phone') {
+      margin-top: 4rem;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import 'spinner';
+
+/**
+ * 1. Fix img margin at bottom.
+ * 2. For a state machine.
+ */
+
+.domain-favicon {
+  position: relative;
+
+  &__error-message, &__spinner, &__image {
+    @include centered();
+    display: none; /* 2 */
+  }
+
+  &__error-message {
+    color: $color-white;
+    line-height: $spinner-height;
+    width: 100%;
+  }
+
+  &__spinner {
+
+  }
+
+  &__image {
+    background-color: $color-white;
+    border-radius: 50%;
+    padding: 1rem + .15rem;
+
+    img {
+      display: block; /* 1 */
+      max-width: 7rem - (1rem + .15rem) * 2;
+    }
+  }
+}

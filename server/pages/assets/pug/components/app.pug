@@ -1,0 +1,10 @@
+include app/domain-favicon
+include app/domain-form
+
+mixin app(title)
+  .app
+    h1.app__title= title
+    .app__domain-form
+      +domain-form("domain-form")
+    .app__domain-favicon
+      +domain-favicon("domain-favicon")

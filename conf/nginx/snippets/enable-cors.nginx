@@ -5,7 +5,7 @@ if ($request_method = OPTIONS) {
   add_header Access-Control-Allow-Origin *;
   add_header Access-Control-Allow-Credentials false;
   add_header Access-Control-Allow-Methods "DELETE, GET, PATCH, POST, PUT";
-  add_header Access-Control-Allow-Headers "Accept-Encoding, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since";
+  add_header Access-Control-Allow-Headers "Accept-Encoding, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, User-Agent";
   # cache preflight value for one day
   add_header Access-Control-Max-Age 86400;
 
