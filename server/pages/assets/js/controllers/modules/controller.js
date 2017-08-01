@@ -1,17 +1,19 @@
-const events = [];
+const channels = [];
 
-function Controller() {
+function Controller(name) {
   if (!(this instanceof Controller)) return new Controller();
+  this.name = name;
 }
 
-Controller.prototype.$on = function (event, fn) {
-  events[event] = events[event] || [];
-  events[event].push(fn);
+Controller.prototype.$on = function (channel, fn) {
+  channels[channel] = channels[channel] || [];
+  channels[channel].push(fn);
 };
 
 Controller.prototype.$emit = function (event, ...args) {
-  if (events[event]) {
-    events[event].forEach(fn => fn(...args));
+  const channel = `${this.name}:${event}`;
+  if (channels[channel]) {
+    channels[channel].forEach(fn => fn(...args));
   }
 };
 
