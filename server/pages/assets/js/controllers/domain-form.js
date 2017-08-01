@@ -1,11 +1,13 @@
 const extractDomain = require('./modules/extract-domain');
 const request = require('./modules/request');
 
+const nameCtrl = 'domain-form';
+
 module.exports = (Controller) => {
-  const ctrl = new Controller();
+  const ctrl = new Controller(nameCtrl);
 
   ctrl.onTryItGrab = function () {
-    const inputDomain = ctrl.formDomainCmp.querySelector('input[type="text"]');
+    const inputDomain = ctrl.domainFormCmp.querySelector('input[type="text"]');
     const value = inputDomain.value;
 
     if (!value) {
@@ -22,7 +24,7 @@ module.exports = (Controller) => {
 
     inputDomain.value = domain;
 
-    ctrl.$emit('grabber:begin-grabbing');
+    ctrl.$emit('begin-grabbing');
 
     request(`http://favicongrabber.com/api/grab/${domain}`, function (err, status, res) {
       if (err) {
@@ -33,7 +35,7 @@ module.exports = (Controller) => {
 
       switch (status) {
         case 200:
-          ctrl.$emit('grabber:end-grabbing', res.icons);
+          ctrl.$emit('end-grabbing', res.icons);
           break;
         case 400:
         case 500:
@@ -50,8 +52,8 @@ module.exports = (Controller) => {
   };
 
   ctrl.$load(() => {
-    ctrl.formDomainCmp = document.querySelector('#form-domain');
+    ctrl.domainFormCmp = document.querySelector(`#${nameCtrl}`);
 
-    ctrl.formDomainCmp.onsubmit = ctrl.$proxy(ctrl.onTryItGrab);
+    ctrl.domainFormCmp.onsubmit = ctrl.$proxy(ctrl.onTryItGrab);
   });
 };

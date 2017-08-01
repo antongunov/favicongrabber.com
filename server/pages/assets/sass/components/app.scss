@@ -1,22 +1,21 @@
-@import 'app/form-domain';
-@import 'app/favicon';
-@import 'app/message-error';
+@import 'app/domain-favicon';
+@import 'app/domain-form';
 
 .app {
   &__title {
     color: $color-white;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
-  &__form-domain {
+  &__domain-form {
     margin-bottom: 1rem;
   }
 
-  &__message-error {
-    margin-bottom: 1rem;
-  }
+  &__domain-favicon {
+    margin: 6rem auto 2rem;
 
-  &__favicon {
-    margin-bottom: 3rem;
+    @include media('<=phone') {
+      margin-top: 4rem;
+    }
   }
 }

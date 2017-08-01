@@ -1,5 +1,4 @@
 const Controller = require('./controllers/modules/controller');
 
-require('./controllers/errors-handler')(Controller);
-require('./controllers/grabber')(Controller);
-require('./controllers/favicon')(Controller);
+require('./controllers/domain-form')(Controller);
+require('./controllers/domain-favicon')(Controller);

@@ -4,11 +4,13 @@
  * Licensed under MIT (https://github.com/tobiasahlin/SpinKit/blob/master/LICENSE)
  */
 
+$spinner-height: 3rem;
+
 .spinner {
-  height: 3rem;
+  height: $spinner-height;
   margin: 0 auto;
   position: relative;
-  width: 3rem;
+  width: $spinner-height;
 
   &__double-bounce-1, &__double-bounce-2 {
     background-color: $color-white;
