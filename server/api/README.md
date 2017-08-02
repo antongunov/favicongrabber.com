@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Favicon Grabber](http://favicongrabber.com/) API is simple and has the one endpoint. The API does not require authentication but has restrictions: 100 requests per minute from one IP address and each API request should specify a valid `User-Agent` header.
+[Favicon Grabber](http://favicongrabber.com/) API is simple and has the one endpoint. The API does not require authentication but has the following restrictions: 100 requests per minute from one IP address and each API request should specify a valid `User-Agent` header.
 
 The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true) and all responses are returned as JSON(P) over HTTP.
 
@@ -10,7 +10,7 @@ The API supports requests and responses using [Cross-Origin Resource Sharing](ht
 
 ## Grab favicons
 
-In order to grab favicons for a website send `GET` request to API endpoint `/api/grab/:domain`, where `:domain` is a required parameter that should be equal the valid [domain name syntax](https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax). 
+In order to grab favicons for a website send a `GET` request to the API endpoint `/api/grab/:domain`, where `:domain` is a required parameter that should be equal to the valid [domain name syntax](https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax). 
 
 For instance, to grab favicons from [GitHub](https://github.com/)'s index page open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON response:
 
@@ -32,11 +32,11 @@ For instance, to grab favicons from [GitHub](https://github.com/)'s index page o
 }
 ```
 
-Property `domain` contains the value of `:domain` parameter. The property `icons` contains an array of `icon` objects and may be empty. Any `icon` object can have three properties the values of which are strings.
+Property `domain` contains the value of `:domain` parameter. The property `icons` contains an array of `icon` objects and may be empty. Any `icon` object can have three properties, the values of which are strings.
 
 Description properties of `icon` object:
 
-* property `src` contains absolute URL for a favicon image and is required and unique;
+* property `src` contains an absolute URL for a favicon image and is required and unique;
 * property `type` equals an [MIME-type](https://en.wikipedia.org/wiki/Media_type)'s favicon image;
 * property `sizes` contains size's favicon image and in a simple case has the following format: `HEIGHTxWIDTH` in pixels (for a full description, see [HTML5 Links](https://www.w3.org/TR/2011/WD-html5-20110113/links.html#attr-link-sizes)). 
 
@@ -45,7 +45,7 @@ Description properties of `icon` object:
 There are two optional parameters for the API:
 
 * `pretty=true` for formatting JSON response;
-* `callback=done` for [JSONP](https://en.wikipedia.org/wiki/JSONP)-response, where `done` is a variant of name the JSONP function.
+* `callback=done` for [JSONP](https://en.wikipedia.org/wiki/JSONP) response, where `done` is a variant of the name of the JSONP function.
 
 ## Error handling
 
