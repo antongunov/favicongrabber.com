@@ -1,0 +1,73 @@
+{
+  "domain": "toster.ru",
+  "icons": [
+    {
+      "src": "https://habracdn.net/toster/images/favicons/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "sizes": "192x192",
+      "src": "https://habracdn.net/toster/images/favicons/favicon-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "160x160",
+      "src": "https://habracdn.net/toster/images/favicons/favicon-160x160.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "96x96",
+      "src": "https://habracdn.net/toster/images/favicons/favicon-96x96.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "16x16",
+      "src": "https://habracdn.net/toster/images/favicons/favicon-16x16.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "32x32",
+      "src": "https://habracdn.net/toster/images/favicons/favicon-32x32.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "57x57",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-57x57.png"
+    },
+    {
+      "sizes": "114x114",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-114x114.png"
+    },
+    {
+      "sizes": "72x72",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-72x72.png"
+    },
+    {
+      "sizes": "144x144",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-144x144.png"
+    },
+    {
+      "sizes": "60x60",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-60x60.png"
+    },
+    {
+      "sizes": "120x120",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-120x120.png"
+    },
+    {
+      "sizes": "76x76",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-76x76.png"
+    },
+    {
+      "sizes": "152x152",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-152x152.png"
+    },
+    {
+      "sizes": "180x180",
+      "src": "https://habracdn.net/toster/images/favicons/apple-touch-icon-180x180.png"
+    },
+    {
+      "src": "https://habracdn.net/toster/images/favicons/mstile-144x144.png"
+    }
+  ]
+}

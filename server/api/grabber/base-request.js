@@ -1,13 +1,12 @@
 const request = require('request');
-const version = require('../../../package.json').version;
 
 module.exports = request.defaults({
   // follow HTTP 3xx responses as redirects
   followRedirect: true,
   headers: {
-    // prevent to redirect to mobile version of a site
-    'User-Agent': `Mozilla/5.0 (Linux) FaviconGrabber/${version}`,
     'Accept': '*/*',
+    // prevent to redirect to the mobile version of a website
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
   },
   timeout: 5000,
 });
