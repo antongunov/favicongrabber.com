@@ -1,7 +1,7 @@
 const channels = [];
 
 function Controller(name) {
-  if (!(this instanceof Controller)) return new Controller();
+  if (!(this instanceof Controller)) return new Controller(name);
   this.name = name;
 }
 
