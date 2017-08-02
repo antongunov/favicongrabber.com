@@ -25,12 +25,12 @@
 
   &__image {
     background-color: $color-white;
-    border-radius: 50%;
-    padding: 1rem + .15rem;
+    border-radius: 2px;
+    padding: 1rem;
 
     img {
       display: block; /* 1 */
-      max-width: 7rem - (1rem + .15rem) * 2;
+      max-width: 7rem - 1rem * 2;
     }
   }
 }
