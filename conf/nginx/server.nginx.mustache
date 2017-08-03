@@ -7,6 +7,7 @@ server {
   include {{&confDir}}/snippets/favicon.nginx;
   include {{&confDir}}/snippets/home.nginx;
   include {{&confDir}}/snippets/static.nginx;
+  include {{&confDir}}/snippets/proxy-download.nginx;
 
   location /api {
     include {{&confDir}}/snippets/enable-cors.nginx;
