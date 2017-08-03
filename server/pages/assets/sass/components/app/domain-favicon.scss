@@ -1,14 +1,16 @@
+@import 'download-button';
 @import 'spinner';
 
 /**
  * 1. Fix img margin at bottom.
  * 2. For a state machine.
+ * 3. Not auto stretch to container width.
  */
 
 .domain-favicon {
   position: relative;
 
-  &__error-message, &__spinner, &__image {
+  &__error-message, &__spinner, &__image-container {
     @include centered();
     display: none; /* 2 */
   }
@@ -23,14 +25,27 @@
 
   }
 
+  &__image-container {
+    margin-top: 1rem + 1rem;
+  }
+
+  &__image, &__download-button {
+    margin: 0 auto 1rem;
+  }
+
   &__image {
     background-color: $color-white;
     border-radius: 2px;
+    display: inline-block; /* 3 */
     padding: 1rem;
 
     img {
       display: block; /* 1 */
       max-width: 7rem - 1rem * 2;
     }
+  }
+
+  &__download-button {
+
   }
 }
