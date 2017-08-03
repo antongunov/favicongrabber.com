@@ -1,8 +1,12 @@
 include spinner
+include download-button
 
 mixin domain-favicon(id)
   div(id= id).domain-favicon
     .domain-favicon__error-message
     .domain-favicon__spinner
       +spinner
-    .domain-favicon__image
+    .domain-favicon__image-container
+      .domain-favicon__image
+      .domain-favicon__download-button
+        +download-button

@@ -1,0 +1,15 @@
+# merge_slashes on|off
+
+location ~ ^/download/(http|https):/(.+)$ {
+  if ($request_method != GET) {
+    return 500;
+  }
+
+  resolver_timeout 5s;
+  resolver 127.0.1.1;
+
+  proxy_set_header User-Agent $http_user_agent;
+  proxy_set_header Referer $http_referer;
+
+  proxy_pass $1://$2;
+}
