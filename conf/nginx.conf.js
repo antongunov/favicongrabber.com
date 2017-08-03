@@ -2,6 +2,6 @@ const resolve = require('path').resolve;
 
 module.exports = {
   rootDir: resolve(__dirname, '../'),
-  confDir: resolve(__dirname, 'nginx/'),
+  snippetsDir: resolve(__dirname, 'nginx/snippets/'),
   env: process.env,
 };

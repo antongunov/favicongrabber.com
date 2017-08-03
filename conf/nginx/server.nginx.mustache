@@ -4,13 +4,15 @@ server {
 
   root {{&rootDir}}/build/;
 
-  include {{&confDir}}/snippets/favicon.nginx;
-  include {{&confDir}}/snippets/home.nginx;
-  include {{&confDir}}/snippets/static.nginx;
-  include {{&confDir}}/snippets/proxy-download.nginx;
+  include {{&snippetsDir}}/favicon.nginx;
+  include {{&snippetsDir}}/home.nginx;
+  include {{&snippetsDir}}/static.nginx;
+  include {{&snippetsDir}}/proxy-download.nginx;
 
   location /api {
-    include {{&confDir}}/snippets/enable-cors.nginx;
+    include {{&snippetsDir}}/proxy-headers.nginx;
+    include {{&snippetsDir}}/enable-cors.nginx;
+
     proxy_pass http://localhost:{{env.NODE_PORT}}/api;
   }
 }
