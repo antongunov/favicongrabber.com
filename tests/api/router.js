@@ -9,16 +9,16 @@ describe('API router', () => {
     request
       .get('/api/unknown-endpoint')
       .expect(404, {
-        error: 'Unknown API endpoint "GET /api/unknown-endpoint"',
+        error: 'Unknown API endpoint "GET /api/unknown-endpoint".',
       })
       .end(done);
   });
 
-  it('Unresolved domain', (done) => {
+  it('Unresolved domain name', (done) => {
     request
       .get('/api/grab/example.test')
       .expect(400, {
-        error: 'Unresolved domain "example.test"',
+        error: 'Unresolved domain name.',
       })
       .end(done);
   });
@@ -27,7 +27,7 @@ describe('API router', () => {
     request
       .get('/api/grab/8.8.8.8')
       .expect(400, {
-        error: 'Connection to server of domain "8.8.8.8" timeout',
+        error: 'Connection to the server of the domain timed out.',
       })
       .end(done);
   });
@@ -35,7 +35,7 @@ describe('API router', () => {
   it('Support for JSONP response', (done) => {
     request
       .get('/api/grab/example.test?callback=done')
-      .expect(400, '/**/ typeof done === \'function\' && done({"error":"Unresolved domain \\"example.test\\""});')
+      .expect(400, '/**/ typeof done === \'function\' && done({"error":"Unresolved domain name."});')
       .end(done);
   });
 });

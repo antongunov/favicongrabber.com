@@ -23,16 +23,16 @@ router.get('/grab/:domain', (req, res, next) => {
       switch (err.code) {
         case 'ENOTFOUND':
           return res.status(400).jsonp({
-            error: `Unresolved domain "${req.domain}"`,
+            error: 'Unresolved domain name.',
           });
         case 'ETIMEDOUT':
         case 'ESOCKETTIMEDOUT':
           return res.status(400).jsonp({
-            error: `Connection to server of domain "${req.domain}" timeout`,
+            error: 'Connection to the server of the domain timed out.',
           });
         case 'EINVAL':
           return res.status(422).jsonp({
-            error: `Invalid domain name "${req.domain}"`,
+            error: 'Invalid domain name.',
           });
         default:
           return next(err);
@@ -44,7 +44,7 @@ router.get('/grab/:domain', (req, res, next) => {
 
 router.use((req, res) => {
   res.status(404).jsonp({
-    error: `Unknown API endpoint "${req.method} ${req.baseUrl}${req.url}"`,
+    error: `Unknown API endpoint "${req.method} ${req.baseUrl}${req.url}".`,
   });
 });
 
@@ -52,7 +52,7 @@ router.use((err, req, res, next) => {
   /* eslint no-unused-vars: off */
   console.error(err);
   res.status(500).jsonp({
-    error: 'General API error',
+    error: 'General API error.',
   });
 });
 
