@@ -39,9 +39,12 @@
     display: inline-block; /* 3 */
     padding: 1rem;
 
+    $image-size: 7rem - 1rem * 2;
+
     img {
       display: block; /* 1 */
-      max-width: 7rem - 1rem * 2;
+      max-height: $image-size;
+      max-width: $image-size;
     }
   }
 
