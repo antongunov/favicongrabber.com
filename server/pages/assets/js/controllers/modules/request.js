@@ -4,10 +4,16 @@ function request(url, done) {
   const xhr = new XMLHttpRequest();
 
   xhr.open('GET', url, true);
-  xhr.responseType = 'json';
+
+  // IE11 does not support when the `responseType` is set to `json`
+  // xhr.responseType = 'json';
 
   xhr.onload = function () {
-    return done(null, this.status, this.response);
+    try {
+      return done(null, this.status, JSON.parse(this.responseText));
+    } catch (err) {
+      return done(err);
+    }
   };
 
   xhr.onerror = function (err) {
