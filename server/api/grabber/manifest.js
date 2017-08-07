@@ -5,27 +5,19 @@ module.exports = ($, done) => {
   const href = $('link[rel="manifest"]', 'head').attr('href');
   if (!href) return done(null, []);
 
-  const url = href[0] === '/' ? new URL(href, $.baseUrl).href : href;
+  const url = new URL(href, $.baseUrl).href;
+
   baseRequest(url, (err, res, manifest) => {
     // ignore errors
     if (err) return done(null, []);
     if (res.statusCode !== 200) return done(null, []);
 
-    let data = {};
+    let icons = [];
     try {
-      data = JSON.parse(manifest);
+      icons = JSON.parse(manifest).icons;
     } catch (err) {
       // ignore errors
       if (err) return done(null, []);
-    }
-
-    const icons = [];
-    if (data.icons) {
-      data.icons.forEach(icon => icons.push({
-        sizes: icon.sizes,
-        src: icon.src[0] === '/' ? new URL(icon.src, $.baseUrl).href : icon.src,
-        type: icon.type,
-      }));
     }
 
     return done(null, icons);

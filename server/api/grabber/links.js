@@ -1,5 +1,3 @@
-const URL = require('url').URL;
-
 const selectors = [
   "link[rel='icon']",
   "link[rel='shortcut icon']",
@@ -18,7 +16,7 @@ module.exports = ($) => {
       const { href, sizes, type } = elem.attribs;
       const icon = {
         sizes,
-        src: href[0] === '/' ? new URL(href, $.baseUrl).href : href,
+        src: href,
         type,
       };
       icons.push(icon);

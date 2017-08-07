@@ -34,7 +34,7 @@ module.exports = (url, done) => {
     ], (err, results) => {
       // ignore errors
       results.forEach(arr => icons = [...icons, ...arr]);
-      return done(null, icons);
+      return done(null, icons, $.baseUrl);
     });
   });
 };

@@ -1,5 +1,3 @@
-const URL = require('url').URL;
-
 module.exports = ($, done) => {
   const icons = [];
 
@@ -7,11 +5,9 @@ module.exports = ($, done) => {
 
   if (tileImage) {
     icons.push({
-      src: tileImage[0] === '/' ? new URL(tileImage, $.baseUrl).href : tileImage,
+      src: tileImage,
     })
   }
-
-  // TODO: browserconfig.xml
 
   return done(null, icons);
 };
