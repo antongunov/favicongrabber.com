@@ -28,6 +28,7 @@
     "include-media": "^1.4.9",
     "markdown-it": "^8.3.1",
     "markdown-it-prism": "^1.1.1",
+    "newrelic": "^2.0.2",
     "request": "^2.81.0"
   },
   "devDependencies": {
