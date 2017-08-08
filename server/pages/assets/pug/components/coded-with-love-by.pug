@@ -9,6 +9,6 @@ mixin coded-with-love-by(name, href)
     | by
     +space
     if href
-      a(href= href title = "Follow me on GitHub" target="_blank").coded-with-love-by__link= name
+      a(href=href target="_blank").coded-with-love-by__link=name
     else
-      = name
+      =name
