@@ -1,0 +1,37 @@
+{
+  "domain": "москва.рф",
+  "icons": [
+    {
+      "sizes": "192x192",
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon192x192.png?17.33.7"
+    },
+    {
+      "sizes": "128x128",
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon128x128.png?17.33.7"
+    },
+    {
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/favicon.ico?17.33.7",
+      "type": "image/x-icon"
+    },
+    {
+      "sizes": "76x76",
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon76x76.png?17.33.7"
+    },
+    {
+      "sizes": "96x96",
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon96x96.png?17.33.7"
+    },
+    {
+      "sizes": "120x120",
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon120x120.png?17.33.7"
+    },
+    {
+      "sizes": "152x152",
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon152x152.png?17.33.7"
+    },
+    {
+      "sizes": "180x180",
+      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon180x180.png?17.33.7"
+    }
+  ]
+}
