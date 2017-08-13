@@ -19,13 +19,15 @@ module.exports = (url, done) => {
   baseRequest(url, (err, res, page) => {
     if (err) return done(err);
 
-    // TODO: add a helpful error message for a user
+    // TODO: add a helpful error message for users
     if (res.statusCode !== 200) return done(null, []);
 
-    // ignore case for tags, attributes and their values: link rel="SHORTCUT ICON"'
-    const pageLowerCase = page.toLowerCase();
+    const $ = cheerio.load(page, {
+      // ignore case for tags and attribute names
+      lowerCaseTags: true,
+      lowerCaseAttributeNames: true,
+    });
 
-    const $ = cheerio.load(pageLowerCase);
     $.baseUrl = `${res.request.uri.protocol}//${res.request.uri.hostname}`;
 
     let icons = links($);
