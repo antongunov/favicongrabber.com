@@ -1,0 +1,9 @@
+{
+  "domain": "trello.com",
+  "icons": [
+    {
+      "src": "https://trello.com/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ]
+}
