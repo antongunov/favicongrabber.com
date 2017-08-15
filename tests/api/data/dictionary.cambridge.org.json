@@ -2,11 +2,15 @@
   "domain": "dictionary.cambridge.org",
   "icons": [
     {
-      "src": "http://dictionary.cambridge.org/external/images/favicon.ico?version=2017-08-04-0938",
+      "src": "http://dictionary.cambridge.org/external/images/favicon.ico",
       "type": "image/x-icon"
     },
     {
-      "src": "http://dictionary.cambridge.org/external/images/apple-touch-icon-precomposed.png?version=2017-08-04-0938",
+      "src": "http://dictionary.cambridge.org/external/images/apple-touch-icon-precomposed.png",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "http://dictionary.cambridge.org/favicon.ico",
       "type": "image/x-icon"
     }
   ]

@@ -10,6 +10,13 @@
     },
     {
       "src": "https://d125fmws0bore1.cloudfront.net/assets/udacity_apple_icon-b2fe0e8bc834963f1cf490fdc55bc3170b37f05374e1e4b383af1d755d1893db.png"
+    },
+    {
+      "src": "https://udacity.com/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://d125fmws0bore1.cloudfront.net/assets/udacity_share-317a7f82552763598a5c91e1550b7cd83663ce02d6d475d703e25a873cd3b574.png"
     }
   ]
 }

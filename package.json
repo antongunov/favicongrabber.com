@@ -29,6 +29,7 @@
     "markdown-it": "^8.3.1",
     "markdown-it-prism": "^1.1.1",
     "newrelic": "^2.0.2",
+    "normalize-url": "^1.9.1",
     "request": "^2.81.0"
   },
   "devDependencies": {

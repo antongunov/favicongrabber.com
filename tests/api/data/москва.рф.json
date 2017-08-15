@@ -3,35 +3,35 @@
   "icons": [
     {
       "sizes": "192x192",
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon192x192.png?17.33.7"
+      "src": "http://москва.рф/static/images/favicon/icon192x192.png"
     },
     {
       "sizes": "128x128",
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon128x128.png?17.33.7"
+      "src": "http://москва.рф/static/images/favicon/icon128x128.png"
     },
     {
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/favicon.ico?17.33.7",
+      "src": "http://москва.рф/static/images/favicon/favicon.ico",
       "type": "image/x-icon"
     },
     {
       "sizes": "76x76",
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon76x76.png?17.33.7"
+      "src": "http://москва.рф/static/images/favicon/icon76x76.png"
     },
     {
       "sizes": "96x96",
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon96x96.png?17.33.7"
+      "src": "http://москва.рф/static/images/favicon/icon96x96.png"
     },
     {
       "sizes": "120x120",
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon120x120.png?17.33.7"
+      "src": "http://москва.рф/static/images/favicon/icon120x120.png"
     },
     {
       "sizes": "152x152",
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon152x152.png?17.33.7"
+      "src": "http://москва.рф/static/images/favicon/icon152x152.png"
     },
     {
       "sizes": "180x180",
-      "src": "http://xn--80adxhks.xn--p1ai/static/images/favicon/icon180x180.png?17.33.7"
+      "src": "http://москва.рф/static/images/favicon/icon180x180.png"
     }
   ]
 }

@@ -10,6 +10,10 @@
     },
     {
       "src": "https://github.com/fluidicon.png"
+    },
+    {
+      "src": "https://github.com/favicon.ico",
+      "type": "image/x-icon"
     }
   ]
 }

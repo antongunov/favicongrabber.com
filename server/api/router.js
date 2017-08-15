@@ -18,7 +18,11 @@ router.param('domain', (req, res, next, domain) => {
 });
 
 router.get('/grab/:domain', (req, res, next) => {
-  grabber(req.domain, (err, data) => {
+  const options = {
+    normalizeUrl: req.query['normalize-url'] === void 0 ? true : req.query['normalize-url'] === 'true',
+  };
+
+  grabber(req.domain, options, (err, data) => {
     if (err) {
       switch (err.code) {
         case 'ENOTFOUND':
