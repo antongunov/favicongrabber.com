@@ -25,7 +25,7 @@ describe('API router', () => {
 
   it('Server timeout', (done) => {
     request
-      .get('/api/grab/8.8.8.8')
+      .get('/api/grab/ns4cpw.name.com')
       .expect(400, {
         error: 'Connection to the server of the domain timed out.',
       })
