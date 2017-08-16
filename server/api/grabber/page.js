@@ -19,7 +19,6 @@ module.exports = (url, done) => {
   baseRequest(url, (err, res, page) => {
     if (err) return done(err);
 
-    // TODO: add a helpful error message for users
     if (res.statusCode !== 200) return done(null, []);
 
     const $ = cheerio.load(page, {

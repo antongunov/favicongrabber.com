@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const grabber = require('./grabber');
+const isDomainName = require('is-domain-name');
 
 /**
  * JSON in a pretty way
@@ -12,9 +13,16 @@ router.all('/*', (req, res, next) => {
 });
 
 router.param('domain', (req, res, next, domain) => {
-  // TODO: validate `domain` property
-  req.domain = domain;
-  return next();
+  const isCyrillic = /[а-я]+/i.test(domain);
+
+  if (isCyrillic || isDomainName(domain)) {
+    req.domain = domain;
+    return next();
+  } else {
+    return res.status(422).jsonp({
+      error: 'Invalid domain name.',
+    });
+  }
 });
 
 router.get('/grab/:domain', (req, res, next) => {
