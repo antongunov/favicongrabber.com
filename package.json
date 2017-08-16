@@ -8,6 +8,15 @@
     "email": "anton@gunov.name"
   },
   "license": "MIT",
+  "homepage": "http://favicongrabber.com/",
+  "keywords": [
+    "favicon-grabber",
+    "grab",
+    "grabber",
+    "get",
+    "retrieve",
+    "favicon"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/antongunov/favicongrabber.git"
