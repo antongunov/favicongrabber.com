@@ -1,3 +1,10 @@
+# redirect www to non-www
+server {
+  server_name www.{{env.NGINX_FQDN}};
+  listen {{env.NGINX_PORT}};
+  return 301 $scheme://{{env.NGINX_FQDN}}$request_uri;
+}
+
 server {
   server_name {{env.NGINX_FQDN}};
   listen {{env.NGINX_PORT}};
