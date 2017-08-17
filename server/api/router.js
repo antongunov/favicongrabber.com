@@ -54,6 +54,12 @@ router.get('/grab/:domain', (req, res, next) => {
   });
 });
 
+router.get('/status', (req, res) => {
+  res.status(200).jsonp({
+    status: 'OK',
+  });
+});
+
 router.use((req, res) => {
   res.status(404).jsonp({
     error: `Unknown API endpoint "${req.method} ${req.baseUrl}${req.url}".`,
