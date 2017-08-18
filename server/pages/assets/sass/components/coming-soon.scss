@@ -1,9 +1,0 @@
-.coming-soon {
-  color: $color-white;
-  font-size: 3rem;
-  text-align: center;
-
-  @include media('<=tablet') {
-    line-height: 1.15;
-  }
-}
