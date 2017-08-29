@@ -3,7 +3,7 @@ const dotEnv = require('dotenv').config();
 module.exports = {
   apps: [
     {
-      name: 'favicongrabber',
+      name: 'favicongrabber.com',
       script: 'server/',
       env: dotEnv.parsed,
     },
