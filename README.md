@@ -30,7 +30,7 @@ Favicon Grabber API is simple and has the one endpoint. For instance, to grab fa
 }
 ```
 
-For the full description, please see [Service API reference](server/api/README.md).
+For the full description, please see [Service API reference](docs/API.md).
 
 ## License
   
