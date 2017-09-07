@@ -5,6 +5,9 @@
 module.exports = (url) => {
   let next = url;
 
+  // strip leading and trailing spaces
+  next = next.replace(/(?:^\s+|\s+$)/g, '');
+
   // https://user:pass@sub.host.com:8080/p/a/t/h?query=string#has
   next = lcut(next, '//');
   // user:pass@sub.host.com:8080/p/a/t/h?query=string#has
