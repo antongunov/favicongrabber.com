@@ -1,5 +1,7 @@
 # Favicon Grabber
 
+![Screenshot of Favicon Grabber](favicongrabber.png)
+
 [Favicon Grabber](http://favicongrabber.com/) is an online service to grab favicons from any domain.
 
 ## API
