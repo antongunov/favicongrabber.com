@@ -1,4 +1,4 @@
-# Favicon Grabber
+# Favicon Grabber [![license](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](LICENSE)
 
 ![Screenshot of Favicon Grabber](favicongrabber.png)
 
