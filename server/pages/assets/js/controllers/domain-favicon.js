@@ -7,7 +7,7 @@ module.exports = (Controller) => {
   const ctrl = new Controller(nameCtrl);
 
   ctrl.onEndGrabbing = (icons) => {
-    if (!(icons.length > 0)) return ctrl.$emit('error', 'Not found favicons.');
+    if (!(icons.length > 0)) return ctrl.$emit('error', 'Not found favicons :(');
 
     const icon = betterIcon(icons);
     const img = new Image();
@@ -26,8 +26,16 @@ module.exports = (Controller) => {
   };
 
   ctrl.onError = (msg) => {
-    ctrl.domainFaviconCmp.active('errorMessage');
-    ctrl.domainFaviconCmp.errorMessage.textContent = msg;
+    const cmp = ctrl.domainFaviconCmp;
+    cmp.active('errorMessage');
+
+    switch (msg) {
+      case 'Not found favicons :(':
+        cmp.errorMessage.innerHTML = 'Not found favicons <i class="fa fa-lg fa-frown-o">';
+        break;
+      default:
+        cmp.errorMessage.textContent = msg;
+    }
   };
 
   ctrl.$load(() => {
