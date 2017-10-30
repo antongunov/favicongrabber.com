@@ -1,9 +1,14 @@
+/**
+ * 1. Fix flexbox min-height bug (https://codepen.io/chriswrightdesign/pen/emQNGZ/).
+ */
+
 .page {
-  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__wrapper {
     margin: 0 auto;
-    height: 100vh;
+    min-height: 100vh;
     padding: 1rem 0 0;
     width: 90%;
 
