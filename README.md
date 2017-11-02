@@ -1,8 +1,16 @@
-# Favicon Grabber [![license](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](LICENSE)
+# Favicon Grabber
 
-![Screenshot of Favicon Grabber](favicongrabber.png)
+[![license](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](LICENSE)
 
 [Favicon Grabber](http://favicongrabber.com/) is an online service to grab favicons from any domain.
+
+<p align="center">
+  <a href="http://favicongrabber.com/" target="_blank">
+    <img src="favicongrabber.png" width="800px">
+    <br>
+    Try Grabbing
+  </a>  
+</p>
 
 ## API
 
