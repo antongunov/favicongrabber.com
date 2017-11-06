@@ -25,6 +25,12 @@
     "url": "https://github.com/antongunov/favicongrabber.com/issues"
   },
   "scripts": {
+    "build:gulp": "gulp default:production",
+    "build:webpack": "webpack --progress --hide-modules",
+    "build": "run-s build:*",
+    "dev:gulp": "gulp default:development",
+    "dev:webpack": "webpack --watch",
+    "dev": "run-p -r dev:*",
     "start": "node -r dotenv/config server/",
     "test": "mocha -r dotenv/config --timeout 7000 tests/*.js tests/**/*.js"
   },
@@ -58,6 +64,7 @@
     "gulp-util": "^3.0.8",
     "mocha": "^3.4.2",
     "mustache": "^2.3.0",
+    "npm-run-all": "^4.1.1",
     "postcss-font-magician": "^2.0.0",
     "postcss-normalize": "^4.0.0",
     "rimraf": "^2.6.1",
