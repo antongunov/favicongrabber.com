@@ -40,7 +40,7 @@ router.get('/grab/:domain', (req, res, next) => {
         case 'ETIMEDOUT':
         case 'ESOCKETTIMEDOUT':
           return res.status(400).jsonp({
-            error: 'Connection to the server of the domain timed out.',
+            error: 'The connection to a server of the domain timed out.',
           });
         case 'EINVAL':
           return res.status(422).jsonp({
