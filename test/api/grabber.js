@@ -6,7 +6,7 @@ const NODE_PORT = parseInt(process.env.NODE_PORT, 10);
 describe('Grabber', () => {
   const request = supertest(`http://localhost:${NODE_PORT}`);
 
-  readdirSync('./tests/api/data')
+  readdirSync('./test/api/data')
     .forEach((filename) => {
       const data = require(`./data/${filename}`);
       it(`Grab ${data.domain}`, (done) => {
