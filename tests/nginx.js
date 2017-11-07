@@ -3,7 +3,7 @@ const supertest = require('supertest');
 const NGINX_PORT = parseInt(process.env.NGINX_PORT, 10);
 
 describe('Nginx as reverse proxy', () => {
-  const request = supertest(`http://${process.env.NGINX_FQDN}:${NGINX_PORT}`);
+  const request = supertest(`http://${process.env.NGINX_SERVER_NAME}:${NGINX_PORT}`);
 
   it('Support for preflight request', (done) => {
     request
