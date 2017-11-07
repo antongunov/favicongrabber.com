@@ -14,7 +14,7 @@ module.exports = ($, done) => {
 
     let icons = [];
     try {
-      icons = JSON.parse(manifest).icons;
+      icons = JSON.parse(manifest).icons || [];
     } catch (err) {
       // ignore errors
       if (err) return done(null, []);
