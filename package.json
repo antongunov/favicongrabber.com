@@ -32,7 +32,7 @@
     "dev:webpack": "webpack --watch",
     "dev": "run-p -r dev:*",
     "start": "node -r dotenv/config server/",
-    "test": "mocha -r dotenv/config --timeout 7000 tests/*.js tests/**/*.js"
+    "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js"
   },
   "dependencies": {
     "async": "^2.5.0",

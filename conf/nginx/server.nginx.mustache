@@ -1,15 +1,15 @@
 # redirect www to non-www
 server {
-  server_name www.{{env.NGINX_FQDN}};
+  server_name www.{{env.NGINX_SERVER_NAME}};
   listen {{env.NGINX_PORT}};
 
   include {{&snippetsDir}}/block-empty-user-agent.nginx;
 
-  return 301 $scheme://{{env.NGINX_FQDN}}$request_uri;
+  return 301 $scheme://{{env.NGINX_SERVER_NAME}}$request_uri;
 }
 
 server {
-  server_name {{env.NGINX_FQDN}};
+  server_name {{env.NGINX_SERVER_NAME}};
   listen {{env.NGINX_PORT}};
 
   include {{&snippetsDir}}/block-empty-user-agent.nginx;

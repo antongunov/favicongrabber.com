@@ -2,10 +2,10 @@ const supertest = require('supertest');
 
 const NGINX_PORT = parseInt(process.env.NGINX_PORT, 10);
 
-describe('Nginx as reverse proxy', () => {
-  const request = supertest(`http://${process.env.NGINX_FQDN}:${NGINX_PORT}`);
+describe('Proxy', () => {
+  const request = supertest(`http://${process.env.NGINX_SERVER_NAME}:${NGINX_PORT}`);
 
-  it('Support for preflight request', (done) => {
+  it('Support for a preflight request', (done) => {
     request
       .options('/api')
       // preflight response headers
@@ -18,7 +18,7 @@ describe('Nginx as reverse proxy', () => {
       .end(done);
   });
 
-  it('Support for CORS headers for GET request', (done) => {
+  it('Support for CORS headers for (GET)', (done) => {
     request
       .get('/api')
       .expect('Access-Control-Allow-Origin', '*')
