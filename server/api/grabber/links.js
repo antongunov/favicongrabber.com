@@ -14,12 +14,14 @@ module.exports = ($) => {
   selectors.forEach((selector) => {
     $(selector, 'head').each((i, elem) => {
       const { href, sizes, type } = elem.attribs;
-      const icon = {
-        sizes,
-        src: href,
-        type,
-      };
-      icons.push(icon);
+      if (href !== '#') {
+        const icon = {
+          sizes,
+          src: href,
+          type,
+        };
+        icons.push(icon);
+      }
     });
   });
 
