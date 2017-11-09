@@ -11,6 +11,8 @@ module.exports = ($, done) => {
     // ignore errors
     if (err) return done(null, []);
     if (res.statusCode !== 200) return done(null, []);
+    // check image size
+    if (!(parseInt(res.headers['content-length'], 10) > 0)) return done(null, []);
 
     return done(null, [{
       src: url,
