@@ -5,6 +5,7 @@
  * 1. Fix img margin at bottom.
  * 2. For a state machine.
  * 3. Not auto stretch to container width.
+ * 4. Fix for svg images.
  */
 
 .domain-favicon {
@@ -44,7 +45,9 @@
     img {
       display: block; /* 1 */
       max-height: $image-size;
+      min-height: 1rem; /* 4 */
       max-width: $image-size;
+      min-width: 1rem; /* 4 */
     }
   }
 
