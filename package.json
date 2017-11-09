@@ -25,13 +25,14 @@
     "url": "https://github.com/antongunov/favicongrabber.com/issues"
   },
   "scripts": {
+    "clean": "gulp clean",
     "build:nginx-conf": "node -r dotenv/config nginx/bin/build-conf",
     "build:gulp": "gulp default:production",
     "build:webpack": "webpack --progress --hide-modules",
-    "build": "run-s build:*",
+    "build": "run-s clean build:*",
     "dev:gulp": "gulp default:development",
     "dev:webpack": "webpack --watch",
-    "dev": "run-p -r dev:*",
+    "dev": "npm run clean && run-p -r dev:*",
     "start": "node -r dotenv/config server/",
     "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js"
   },

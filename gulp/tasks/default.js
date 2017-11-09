@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 
 gulp.task('default:production', gulp.series(
-  'clean',
   gulp.parallel(
     'fonts',
     'public',
@@ -11,7 +10,6 @@ gulp.task('default:production', gulp.series(
 ));
 
 gulp.task('default:development', gulp.series(
-  'clean',
   gulp.parallel(
     'fonts',
     'public',
