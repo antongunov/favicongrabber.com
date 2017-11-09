@@ -1,0 +1,27 @@
+{
+  "domain": "hh.ru",
+  "icons": [
+    {
+      "src": "https://i.hh.ru/favicons/hh.ico"
+    },
+    {
+      "sizes": "76x76",
+      "src": "https://i.hh.ru/apple/hh/touch-icon-ipad.png"
+    },
+    {
+      "sizes": "120x120",
+      "src": "https://i.hh.ru/apple/hh/touch-icon-iphone-retina.png"
+    },
+    {
+      "sizes": "152x152",
+      "src": "https://i.hh.ru/apple/hh/touch-icon-ipad-retina.png"
+    },
+    {
+      "src": "https://novosibirsk.hh.ru/favicon.ico",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "https://i.hh.ru/favicons/144x144.png"
+    }
+  ]
+}

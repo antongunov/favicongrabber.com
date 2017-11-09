@@ -1,4 +1,4 @@
-const baseRequest = require('./base-request');
+const request = require('./request.conf');
 const cheerio = require('cheerio');
 const parallel = require('async/parallel');
 
@@ -16,7 +16,7 @@ const grab = (fn, $) => {
 };
 
 module.exports = (url, done) => {
-  baseRequest(url, (err, res, page) => {
+  request(url, (err, res, page) => {
     if (err) return done(err);
 
     if (res.statusCode !== 200) return done(null, []);

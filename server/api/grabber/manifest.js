@@ -1,4 +1,4 @@
-const baseRequest = require('./base-request');
+const request = require('./request.conf');
 const URL = require('url').URL;
 
 module.exports = ($, done) => {
@@ -7,7 +7,7 @@ module.exports = ($, done) => {
 
   const url = new URL(href, $.baseUrl).href;
 
-  baseRequest(url, (err, res, manifest) => {
+  request(url, (err, res, manifest) => {
     // ignore errors
     if (err) return done(null, []);
     if (res.statusCode !== 200) return done(null, []);
