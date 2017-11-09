@@ -59,6 +59,7 @@
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.1",
     "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",

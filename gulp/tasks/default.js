@@ -1,13 +1,10 @@
 const gulp = require('gulp');
 
-/**
- * Gulp tasks
- */
-
 gulp.task('default:production', gulp.series(
   'clean',
   gulp.parallel(
-    'copy',
+    'fonts',
+    'public',
     'pug',
     'sass'
   )
@@ -16,7 +13,8 @@ gulp.task('default:production', gulp.series(
 gulp.task('default:development', gulp.series(
   'clean',
   gulp.parallel(
-    'copy',
+    'fonts',
+    'public',
     'pug',
     'sass'
   ),
@@ -26,6 +24,4 @@ gulp.task('default:development', gulp.series(
   )
 ));
 
-gulp.task('default', gulp.series(
-  `default:${process.env.NODE_ENV}`
-));
+gulp.task('default', gulp.series(`default:${process.env.NODE_ENV}`));

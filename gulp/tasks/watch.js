@@ -1,27 +1,9 @@
 const gulp = require('gulp');
 
-const pagesDir = 'server/pages';
-const nginxDir = 'conf/nginx';
-
-/**
- * Gulp tasks
- */
-
 gulp.task('watch', (done) => {
-  gulp.watch([
-    `${pagesDir}/*.pug`,
-    `${pagesDir}/assets/pug/**/*.pug`,
-    `${pagesDir}/assets/blocks/**/*.pug`,
-  ], gulp.series('pug'));
-  gulp.watch([
-    `${pagesDir}/*.!(pug)`,
-  ], gulp.series('copy:root'));
-  gulp.watch([
-    `${pagesDir}/assets/fonts/*`,
-  ], gulp.series('copy:fonts'));
-  gulp.watch([
-    `${pagesDir}/assets/sass/**/*.scss`,
-    `${pagesDir}/assets/blocks/**/*.scss`,
-  ], gulp.series('sass'));
+  gulp.watch('pages/**/*.pug', gulp.series('pug'));
+  gulp.watch('public/**/*/', gulp.series('public'));
+  gulp.watch('assets/fonts/*', gulp.series('fonts'));
+  gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
   return done();
 });
