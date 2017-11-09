@@ -4,4 +4,4 @@ node_modules/
 
 .env
 
-conf/nginx/server.nginx
+nginx/server.nginx

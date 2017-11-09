@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const fs = require('fs');
 const render = require('mustache').render;
 
-const nginxConf = require('../../conf/nginx.conf');
-const nginxDir = 'conf/nginx';
+const nginxConf = require('../../nginx/nginx.conf');
+const nginxDir = 'nginx';
 
 /**
  * Gulp tasks

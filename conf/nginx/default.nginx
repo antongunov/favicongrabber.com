@@ -1,7 +1,0 @@
-server {
-  listen *:80 default_server;
-  # bad `Host` header
-  server_name _;
-  # close a connection without sending a response header
-  return 444;
-}
