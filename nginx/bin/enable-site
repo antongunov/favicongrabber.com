@@ -4,7 +4,7 @@ set -e
 
 NGINX_CONF=/etc/nginx
 
-SITE_HOME=`cd $(dirname $0)/.. && pwd`
+SITE_HOME=`cd $(dirname $0)/../.. && pwd`
 SITE_NAME=`basename $SITE_HOME`
 
-sudo ln -s --force $SITE_HOME/nginx/conf/server.nginx $NGINX_CONF/sites-enabled/$SITE_NAME
+sudo ln -s --force $SITE_HOME/nginx/server.nginx $NGINX_CONF/sites-enabled/$SITE_NAME
