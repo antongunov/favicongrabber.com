@@ -23,8 +23,5 @@ gulp.task('watch', (done) => {
     `${pagesDir}/assets/sass/**/*.scss`,
     `${pagesDir}/assets/blocks/**/*.scss`,
   ], gulp.series('sass'));
-  gulp.watch([
-    `${nginxDir}/server.nginx.mustache`,
-  ], gulp.series('nginx:conf'));
   return done();
 });

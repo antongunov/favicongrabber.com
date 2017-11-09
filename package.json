@@ -25,6 +25,7 @@
     "url": "https://github.com/antongunov/favicongrabber.com/issues"
   },
   "scripts": {
+    "build:nginx-conf": "node -r dotenv/config nginx/bin/build-conf",
     "build:gulp": "gulp default:production",
     "build:webpack": "webpack --progress --hide-modules",
     "build": "run-s build:*",
