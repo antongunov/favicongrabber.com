@@ -2,10 +2,10 @@
   "domain": "italki.com",
   "icons": [
     {
-      "src": "https://italki.com/favicon.ico"
+      "src": "https://www.italki.com/favicon.ico"
     },
     {
-      "src": "https://italki.com/favicon.ico",
+      "src": "https://www.italki.com/favicon.ico",
       "type": "image/x-icon"
     }
   ]

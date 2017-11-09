@@ -2,10 +2,10 @@
   "domain": "digitalocean.com",
   "icons": [
     {
-      "src": "https://digitalocean.com/favicon-97c70234.png"
+      "src": "https://www.digitalocean.com/favicon-97c70234.png"
     },
     {
-      "src": "https://digitalocean.com/apple-touch-icon.png"
+      "src": "https://www.digitalocean.com/apple-touch-icon.png"
     },
     {
       "src": "http://assets.digitalocean.com/favicon.ico",
@@ -13,12 +13,12 @@
       "sizes": "512x512"
     },
     {
-      "src": "https://digitalocean.com/apple-touch-icon.png",
+      "src": "https://www.digitalocean.com/apple-touch-icon.png",
       "type": "image/png",
       "sizes": "180x180"
     },
     {
-      "src": "https://digitalocean.com/favicon.ico",
+      "src": "https://www.digitalocean.com/favicon.ico",
       "type": "image/x-icon"
     }
   ]

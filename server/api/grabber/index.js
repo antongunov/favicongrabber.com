@@ -12,7 +12,8 @@ module.exports = (domain, options, done) => {
       const url = new URL(icon.src, baseUrl);
       if (options.normalizeUrl) {
         icon.src = normalizeUrl(url.href, {
-          removeQueryParameters: [ /.+/, ],
+          removeQueryParameters: [/.+/],
+          stripWWW: false,
         });
       } else {
         icon.src = url.href;
