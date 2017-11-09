@@ -1,6 +1,4 @@
-# Favicon Grabber
-
-[![license](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](LICENSE)
+# Favicon Grabber [![license](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](LICENSE)
 
 [Favicon Grabber](http://favicongrabber.com/) is an online service to grab favicons from any domain.
 
@@ -14,30 +12,17 @@
 
 ## API
 
-Favicon Grabber API is simple and has the one endpoint. For instance, to grab favicons from [DigitalOcean](https://digitalocean.com/)'s index page open [http://favicongrabber.com/api/grab/digitalocean.com](http://favicongrabber.com/api/grab/digitalocean.com?pretty=true) in your favorite browser:
+Favicon Grabber API is simple and has the one endpoint. For instance, to grab favicons from [digitalocean.com](https://digitalocean.com/) open [http://favicongrabber.com/api/grab/digitalocean.com](http://favicongrabber.com/api/grab/digitalocean.com?pretty=true) in your favorite browser.
 
-```json
-{
-  "domain": "digitalocean.com",
-  "icons": [
-    {
-      "src": "https://www.digitalocean.com/favicon-97c70234.png"
-    },
-    {
-      "src": "https://www.digitalocean.com/apple-touch-icon.png"
-    },
-    {
-      "sizes": "512x512",
-      "src": "http://assets.digitalocean.com/favicon.ico",
-      "type": "image/png"
-    },
-    {
-      "sizes": "180x180",
-      "src": "https://www.digitalocean.com/apple-touch-icon.png",
-      "type": "image/png"
-    }
-  ]
-}
+### Example Using
+
+Find all icons with `/apple/` mask in `src` property:
+
+```javascript
+fetch('http://favicongrabber.com/api/grab/udemy.com')
+  .then(response => response.json())
+  .then(({ icons }) => icons.filter(({ src }) => /apple/.test(src)))
+  .then(icons => icons.forEach(icon => console.log(icon)));
 ```
 
 For the full description, please see [Service API reference](docs/API.md).
