@@ -8,7 +8,7 @@ const filters = {
   'markdown-it-prism': markdownItPrismFilter,
 };
 
-gulp.task('pug', () => gulp.src('server/pages/*.pug')
+gulp.task('pug', () => gulp.src('pages/*.pug')
     .pipe(plumber())
     .pipe(pug({
       filters,

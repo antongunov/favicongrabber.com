@@ -1,13 +1,11 @@
 const resolve = require('path').resolve;
 const webpack = require('webpack');
 
-const context = resolve('server/pages/assets/js/');
+const context = resolve('assets/js/');
 
 module.exports = {
   context,
-  entry: {
-    app: './app.js'
-  },
+  entry: { app: './app.js' },
   output: {
     filename: '[name].js',
     path: resolve('build/assets/js/'),

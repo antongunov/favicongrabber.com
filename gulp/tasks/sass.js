@@ -7,12 +7,12 @@ const autoprefixer = require('autoprefixer');
 const normalize = require('postcss-normalize');
 const fontMagician = require('postcss-font-magician');
 
-gulp.task('sass', () => gulp.src('server/pages/assets/sass/main.scss')
+gulp.task('sass', () => gulp.src('assets/sass/main.scss')
     .pipe(plumber())
     .pipe(sass({ includePaths: ['node_modules/'] }))
     .pipe(postcss([
       normalize(),
-      fontMagician({ hosted: ['server/pages/assets/fonts/'] }),
+      fontMagician({ hosted: ['assets/fonts/'] }),
       autoprefixer({ cascade: false }),
     ]))
     .pipe(gulp.dest('build/assets/css/')));
