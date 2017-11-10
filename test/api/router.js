@@ -25,7 +25,7 @@ describe('Router', () => {
 
   it('Server timeout', (done) => {
     request
-      .get('/api/grab/ns4cpw.name.com')
+      .get('/api/grab/news.digitalocean.com')
       .expect(400, {
         error: 'The connection to a server of the domain timed out.',
       })

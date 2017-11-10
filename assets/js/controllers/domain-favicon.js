@@ -7,7 +7,7 @@ module.exports = (Controller) => {
   const ctrl = new Controller(nameCtrl);
 
   ctrl.onEndGrabbing = (icons) => {
-    if (!(icons.length > 0)) return ctrl.$emit('error', 'Not found favicons :(');
+    if (!(icons.length > 0)) return ctrl.$emit('error', 'Not found favicons :-(');
 
     const icon = betterIcon(icons);
     const img = new Image();
@@ -26,16 +26,8 @@ module.exports = (Controller) => {
   };
 
   ctrl.onError = (msg) => {
-    const cmp = ctrl.domainFaviconCmp;
-    cmp.active('errorMessage');
-
-    switch (msg) {
-      case 'Not found favicons :(':
-        cmp.errorMessage.innerHTML = 'Not found favicons <i class="fa fa-lg fa-frown-o">';
-        break;
-      default:
-        cmp.errorMessage.textContent = msg;
-    }
+    ctrl.domainFaviconCmp.errorMessage.textContent = msg;
+    ctrl.domainFaviconCmp.active('errorMessage');
   };
 
   ctrl.$load(() => {
@@ -49,11 +41,11 @@ module.exports = (Controller) => {
       active(name) {
         Object.keys(this).forEach((key) => {
           if (has.call(this, key) && this[key].style) {
-            this[key].style['display'] = 'none';
+            this[key].style.display = 'none';
           }
         });
-        this[name].style['display'] = 'inline-block';
-      }
+        this[name].style.display = 'inline-block';
+      },
     };
 
     ctrl.domainFaviconCmp.imageContainer.image = ctrl.domainFaviconCmp.imageContainer.querySelector(`.${nameCtrl}__image`);
