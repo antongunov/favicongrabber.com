@@ -16,7 +16,7 @@ Favicon Grabber API is simple and has the one endpoint. For instance, to grab fa
 
 ### Example Using
 
-Find all icons with `/apple/` mask in `src` property:
+Grab icons with `/apple/` mask in `src` property:
 
 ```javascript
 fetch('http://favicongrabber.com/api/grab/udemy.com')
