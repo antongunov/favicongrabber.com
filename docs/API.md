@@ -12,7 +12,7 @@ The API supports requests and responses using [Cross-Origin Resource Sharing](ht
 
 In order to grab favicons for a website send a `GET` request to the API endpoint `/api/grab/:domain`, where `:domain` is a required parameter that should be equal to the valid [domain name syntax](https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax). 
 
-For instance, to grab favicons from [GitHub](https://github.com/)'s index page open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON response:
+For instance, to grab favicons from [github.com](https://github.com/) domain open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON response:
 
 ```json
 {
@@ -53,6 +53,6 @@ The API uses HTTP response codes to indicate API errors. All error messages have
 
 ```json
 {
-  "error": "Unresolved domain \"example.test\""
+  "error": "Unresolved domain name."
 }
 ```
