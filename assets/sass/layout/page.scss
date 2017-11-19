@@ -3,8 +3,8 @@
  */
 
 .page {
-  display: flex;
-  flex-direction: column;
+  display: flex; /* 1 */
+  flex-direction: column; /* 1 */
 
   &__wrapper {
     margin: 0 auto;
