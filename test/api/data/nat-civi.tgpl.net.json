@@ -1,0 +1,9 @@
+{
+  "domain": "nat-civi.tgpl.net",
+  "icons": [
+    {
+      "src": "https://nat-civi.tgpl.net/sites/all/themes/natcivi_bootstrap/favicon.ico",
+      "type": "image/vnd.microsoft.icon"
+    }
+  ]
+}

@@ -19,7 +19,8 @@ module.exports = (url, done) => {
   request(url, (err, res, page) => {
     if (err) return done(err);
 
-    if (res.statusCode !== 200) return done(null, []);
+    // if (res.statusCode !== 200) return done(null, []);
+    if (page && typeof page !== 'string' && !(page instanceof String)) return done(null, []);
 
     const $ = cheerio.load(page, {
       // ignore case for tags and attribute names
