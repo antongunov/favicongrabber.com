@@ -12,7 +12,7 @@ module.exports = ($) => {
   const icons = [];
 
   selectors.forEach((selector) => {
-    $(selector, 'head').each((i, elem) => {
+    $(selector).each((i, elem) => {
       const { href, sizes, type } = elem.attribs;
       if (href !== '#') {
         const icon = {

@@ -1,4 +1,16 @@
 {
   "domain": "timeclockwizard.com",
-  "icons": []
+  "icons": [
+    {
+      "sizes": "32x32",
+      "src": "https://www.timeclockwizard.com/wp-content/uploads/2017/05/cropped-favicon-1-32x32.png"
+    },
+    {
+      "sizes": "192x192",
+      "src": "https://www.timeclockwizard.com/wp-content/uploads/2017/05/cropped-favicon-1-192x192.png"
+    },
+    {
+      "src": "https://www.timeclockwizard.com/wp-content/uploads/2017/05/cropped-favicon-1-180x180.png"
+    }
+  ]
 }
