@@ -8,6 +8,9 @@ location ~ ^/download/(http|https):/(.+)$ {
   resolver_timeout 5s;
   resolver 127.0.1.1;
 
+  # enables passing of the server name through SNI
+  proxy_ssl_server_name on;
+
   proxy_set_header User-Agent $http_user_agent;
   proxy_set_header Referer $http_referer;
 

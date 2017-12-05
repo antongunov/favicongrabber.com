@@ -25,4 +25,11 @@ describe('Proxy', () => {
       .expect(404)
       .end(done);
   });
+
+  it('Support for SNI', (done) => {
+    request
+      .get('/download/https://vuejs.org/images/icons/favicon-96x96.png')
+      .expect(200)
+      .end(done);
+  });
 });
