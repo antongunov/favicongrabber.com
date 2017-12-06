@@ -14,7 +14,7 @@ module.exports = ($) => {
   selectors.forEach((selector) => {
     $(selector).each((i, elem) => {
       const { href, sizes, type } = elem.attribs;
-      if (href !== '#') {
+      if (href && href !== '#') {
         const icon = {
           sizes,
           src: href,
