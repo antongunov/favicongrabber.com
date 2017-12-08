@@ -14,7 +14,10 @@ module.exports = ($, done) => {
 
     let icons = [];
     try {
-      icons = JSON.parse(manifest).icons || [];
+      const parsed = JSON.parse(manifest);
+      if (Array.isArray(parsed.icons)) {
+        icons = parsed.icons.map(({ src, sizes, type }) => ({ src, sizes, type })) || [];
+      }
     } catch (err) {
       // ignore errors
       if (err) return done(null, []);
