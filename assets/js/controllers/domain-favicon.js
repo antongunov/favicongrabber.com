@@ -7,12 +7,18 @@ module.exports = (Controller) => {
   const ctrl = new Controller(nameCtrl);
 
   ctrl.onEndGrabbing = (icons) => {
-    if (!(icons.length > 0)) return ctrl.$emit('error', 'Not found favicons :-(');
+    if (!(icons.length > 0)) {
+      return ctrl.$emit('error', 'Sorry, not found favicons :-(');
+    }
 
     const icon = betterIcon(icons);
     const img = new Image();
 
     img.onload = function () {
+      if (this.height === 1 && this.width === 1) {
+        return ctrl.$emit('error', 'Sorry, only found a favicon with size equals to 1x1 pixels :-(');
+      }
+
       ctrl.domainFaviconCmp.imageContainer.image.innerHTML = '';
       ctrl.domainFaviconCmp.imageContainer.image.appendChild(this);
 
