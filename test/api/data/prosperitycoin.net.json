@@ -1,4 +1,9 @@
 {
   "domain": "prosperitycoin.net",
-  "icons": []
+  "icons": [
+    {
+      "src": "http://www.prosperitycoin.net/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ]
 }
