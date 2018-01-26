@@ -50,7 +50,7 @@
     "markdown-it": "^8.3.1",
     "markdown-it-prism": "^1.1.1",
     "newrelic": "^2.0.2",
-    "normalize-url": "^1.9.1",
+    "normalize-url": "^2.0.1",
     "request": "^2.81.0"
   },
   "devDependencies": {
@@ -60,8 +60,8 @@
     "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.12",
     "cssnano": "^3.10.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.6.1",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-plumber": "^1.1.0",
@@ -69,7 +69,7 @@
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
-    "mocha": "^3.4.2",
+    "mocha": "^5.0.0",
     "mustache": "^2.3.0",
     "npm-run-all": "^4.1.1",
     "postcss-font-magician": "^2.0.0",
