@@ -1,4 +1,4 @@
-const resolve = require('path').resolve;
+const { resolve } = require('path');
 const webpack = require('webpack');
 
 require('dotenv').config();
@@ -20,6 +20,7 @@ module.exports = {
       use: [{ loader: 'babel-loader' }],
     }],
   },
+  devtool: !live ? false : 'source-map',
   plugins: !live
     ? [
       new webpack.DefinePlugin({ 'process.env': { NODE_ENV: '"production"' } }),
