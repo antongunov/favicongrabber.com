@@ -10,7 +10,7 @@ module.exports = (Controller) => {
 
     if (button) {
       button.addEventListener('click', () => {
-        window.ga('send', 'event', 'favicons', 'download', this.href);
+        window.ga('send', 'event', 'favicons', 'download', button.href);
       });
     }
   });
