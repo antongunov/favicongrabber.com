@@ -25,20 +25,20 @@
     "url": "https://github.com/antongunov/favicongrabber.com/issues"
   },
   "scripts": {
-    "clean": "rm -rf build",
+    "build": "run-s clean build:*",
     "build:gulp": "gulp default:production",
     "build:webpack": "webpack --progress --hide-modules",
-    "build": "run-s clean build:*",
+    "clean": "rm -rf build",
+    "dev": "npm run clean && run-p -r dev:*",
     "dev:gulp": "gulp default:development",
     "dev:webpack": "webpack --watch",
-    "dev": "npm run clean && run-p -r dev:*",
+    "lint": "eslint assets/js/**/*.js; exit 0",
+    "nginx": "run-s nginx:build-conf nginx:enable-site nginx:reload",
     "nginx:build-conf": "node -r dotenv/config nginx/bin/build-conf",
     "nginx:enable-site": "sudo ln -s --force `pwd`/nginx/server.nginx /etc/nginx/sites-enabled/favicongrabber.com",
     "nginx:reload": "sudo nginx -s reload",
-    "nginx": "run-s nginx:build-conf nginx:enable-site nginx:reload",
     "start": "node -r dotenv/config server/",
-    "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js",
-    "lint": "eslint assets/js/**/*.js; exit 0"
+    "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js"
   },
   "dependencies": {
     "async": "^2.5.0",
