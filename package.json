@@ -37,7 +37,8 @@
     "nginx:reload": "sudo nginx -s reload",
     "nginx": "run-s nginx:build-conf nginx:enable-site nginx:reload",
     "start": "node -r dotenv/config server/",
-    "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js"
+    "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js",
+    "lint": "eslint assets/js/**/*.js; exit 0"
   },
   "dependencies": {
     "async": "^2.5.0",
