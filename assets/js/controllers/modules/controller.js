@@ -22,7 +22,8 @@ Controller.prototype.$proxy = function (fn, ...args) {
 };
 
 Controller.prototype.$load = function (fn) {
-  window.addEventListener('load', this.$proxy(fn), false);
+  const live = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+  window.addEventListener('load', this.$proxy(fn, { live }), false);
 };
 
 module.exports = Controller;
