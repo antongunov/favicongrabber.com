@@ -3,8 +3,8 @@ const nameCtrl = 'ga';
 module.exports = (Controller) => {
   const ctrl = new Controller(nameCtrl);
 
-  ctrl.$load(() => {
-    if (!window.ga) {
+  ctrl.$load(({ live }) => {
+    if (!live && !window.ga) {
       console.warn('Google Analytics module not found.');
       return;
     }
