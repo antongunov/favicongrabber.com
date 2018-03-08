@@ -17,8 +17,8 @@ Controller.prototype.$emit = function (event, ...args) {
   }
 };
 
-Controller.prototype.$proxy = function (fn) {
-  return fn.bind(this);
+Controller.prototype.$proxy = function (fn, ...args) {
+  return fn.bind(this, ...args);
 };
 
 Controller.prototype.$load = function (fn) {
