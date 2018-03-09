@@ -13,7 +13,7 @@ gulp.task('browser-sync:init', (done) => {
       index: 'home.html',
       serveStaticOptions: { extensions: ['html'] },
     },
-    open: false,
+    open: true,
     ui: false,
     notify: false,
   }, done);
