@@ -6,6 +6,23 @@ require('dotenv').config();
 const live = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 const context = resolve('assets/js/');
 
+const plugins = [];
+
+if (!live) {
+  plugins.push(
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"',
+      },
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+    }),
+  );
+}
+
 module.exports = {
   context,
   entry: { app: './app.js' },
@@ -21,10 +38,5 @@ module.exports = {
     }],
   },
   devtool: !live ? false : 'source-map',
-  plugins: !live
-    ? [
-      new webpack.DefinePlugin({ 'process.env': { NODE_ENV: '"production"' } }),
-      new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
-    ]
-    : [],
+  plugins,
 };
