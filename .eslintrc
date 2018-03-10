@@ -5,7 +5,7 @@
       "devDependencies": [
         "gulpfile.js",
         "gulp/**",
-        "tests/**",
+        "test/**",
         "webpack.config.js"
       ]
     }]
