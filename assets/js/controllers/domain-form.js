@@ -26,7 +26,7 @@ module.exports = (Controller) => {
 
     ctrl.$emit('begin-grabbing');
 
-    request(`http://favicongrabber.com/api/grab/${domain}`, function (err, status, res) {
+    request(`/api/grab/${domain}`, function (err, status, res) {
       if (err) {
         console.error(err);
         ctrl.$emit('error', 'General UI error.');
