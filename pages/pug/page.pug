@@ -17,7 +17,7 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title= title
     link(rel="stylesheet" href="/assets/css/main.css")
-    if env.GA_ID
+    if env.GA_ID && env.NODE_ENV == "production"
       include google-analytics
     script(src="/assets/js/app.js" defer)
   body
