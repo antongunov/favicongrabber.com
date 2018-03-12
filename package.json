@@ -38,7 +38,8 @@
     "nginx:enable-site": "sudo ln -s --force `pwd`/nginx/server.nginx /etc/nginx/sites-enabled/favicongrabber.com",
     "nginx:reload": "sudo nginx -s reload",
     "start": "node -r dotenv/config server/",
-    "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js"
+    "test": "mocha -r dotenv/config --timeout 7000 test/*.js test/**/*.js",
+    "version": "git log -n 1 --pretty=format:'%h' > build/version.txt"
   },
   "dependencies": {
     "async": "^2.5.0",
