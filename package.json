@@ -25,7 +25,7 @@
     "url": "https://github.com/antongunov/favicongrabber.com/issues"
   },
   "scripts": {
-    "build": "run-s clean build:*",
+    "build": "npm run clean && run-p build:*",
     "build:gulp": "gulp default:production",
     "build:webpack": "webpack --progress --hide-modules",
     "clean": "rm -rf build",
