@@ -32,6 +32,7 @@
     "dev": "npm run clean && run-p -r dev:*",
     "dev:gulp": "gulp default:development",
     "dev:webpack": "webpack --watch",
+    "install": "run-s build version nginx",
     "lint": "eslint assets/js/**/*.js; exit 0",
     "nginx": "run-s nginx:build-conf nginx:enable-site nginx:reload",
     "nginx:build-conf": "node -r dotenv/config nginx/bin/build-conf",
