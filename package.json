@@ -34,6 +34,7 @@
     "dev:webpack": "webpack --watch",
     "install": "run-s build version nginx",
     "lint": "eslint assets/js/**/*.js; exit 0",
+    "lint:fix": "eslint assets/js/**/*.js --fix; exit 0",
     "nginx": "run-s nginx:build-conf nginx:enable-site nginx:reload",
     "nginx:build-conf": "node -r dotenv/config nginx/bin/build-conf",
     "nginx:enable-site": "sudo ln -s --force `pwd`/nginx/server.nginx /etc/nginx/sites-enabled/`grep -Po 'NGINX_SERVER_NAME=\\K[^\\s]+' .env`",
