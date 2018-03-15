@@ -5,7 +5,9 @@ module.exports = (Controller) => {
 
   ctrl.$load(({ live }) => {
     if (!live && !window.ga) {
+      /* eslint-disable no-console */
       console.warn('Google Analytics module not found.');
+      /* eslint-enable no-console */
       return;
     }
 

@@ -28,7 +28,9 @@ module.exports = (Controller) => {
 
     request(`/api/grab/${domain}`, (err, status, res) => {
       if (err) {
+        /* eslint-disable no-console */
         console.error(err);
+        /* eslint-enable no-console */
         ctrl.$emit('error', 'General UI error.');
         return false;
       }
@@ -43,7 +45,9 @@ module.exports = (Controller) => {
           ctrl.$emit('error', res.error);
           break;
         default:
+          /* eslint-disable no-console */
           console.error(`An unrecognized HTTP status ${status} was received.`);
+          /* eslint-enable no-console */
           ctrl.$emit('error', 'General UI error.');
       }
     });
