@@ -6,7 +6,10 @@ module.exports = (Controller) => {
   const ctrl = new Controller(nameCtrl);
 
   ctrl.$load(({ live }) => {
-    if (!live && !window.ga) return warning('Google Analytics module not found.');
+    if (!live && !window.ga) {
+      warning('Google Analytics module not found.');
+      return;
+    }
 
     const button = document.querySelector('.download-button');
 
