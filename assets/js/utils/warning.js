@@ -1,6 +1,8 @@
 /**
  * Prints a warning message in the console.
- * @param message The warning message.
+ *
+ * @param {string} message The warning message.
+ * @returns {void}
  */
 module.exports = (message) => {
   /* eslint-disable no-console */
