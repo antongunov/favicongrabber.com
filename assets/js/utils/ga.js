@@ -10,6 +10,14 @@ const warning = require('./warning');
  * @returns {void}
  */
 function event(category, action, label, value) {
+  if (category == null) {
+    throw new Error('The category parameter is required.');
+  }
+
+  if (action == null) {
+    throw new Error('The action parameter is required.');
+  }
+
   if (!window.ga) {
     warning('Google Analytics module not found.');
     return;
