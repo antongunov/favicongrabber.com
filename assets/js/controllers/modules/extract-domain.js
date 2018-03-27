@@ -1,4 +1,22 @@
 /**
+ * Help function to cut off the left part of a string.
+ */
+
+const lcut = (str, of) => {
+  const inx = str.lastIndexOf(of);
+  return inx > -1 ? str.slice(inx + of.length) : str;
+};
+
+/**
+ * Help function to cut off the right part of a string.
+ */
+
+const rcut = (str, of) => {
+  const inx = str.indexOf(of);
+  return inx > -1 ? str.slice(0, inx) : str;
+};
+
+/**
  * Extract a domain name from a URL.
  */
 
@@ -18,22 +36,4 @@ module.exports = (url) => {
   next = rcut(next, ':');
 
   return next;
-};
-
-/**
- * Help function to cut off the left part of a string.
- */
-
-const lcut = (str, of) => {
-  const inx = str.lastIndexOf(of);
-  return inx > -1 ? str.slice(inx + of.length) : str;
-};
-
-/**
- * Help function to cut off the right part of a string.
- */
-
-const rcut = (str, of) => {
-  const inx = str.indexOf(of);
-  return inx > -1 ? str.slice(0, inx) : str;
 };
