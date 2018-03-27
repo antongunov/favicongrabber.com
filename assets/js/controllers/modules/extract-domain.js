@@ -1,5 +1,5 @@
 /**
- * Extract the domain name from a URL.
+ * Extract a domain name from a URL.
  */
 
 module.exports = (url) => {
