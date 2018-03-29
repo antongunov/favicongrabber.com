@@ -21,10 +21,8 @@ const rcut = (str, of) => {
  */
 
 module.exports = (url) => {
-  let next = url;
-
-  // strip leading and trailing spaces
-  next = next.replace(/(?:^\s+|\s+$)/g, '');
+  // removes whitespace from both ends of a URL
+  let next = url.trim();
 
   // https://user:pass@sub.host.com:8080/p/a/t/h?query=string#has
   next = lcut(next, '//');
