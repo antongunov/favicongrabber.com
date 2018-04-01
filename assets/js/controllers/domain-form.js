@@ -7,9 +7,9 @@ const nameCtrl = 'domain-form';
 module.exports = (Controller) => {
   const ctrl = new Controller(nameCtrl);
 
-  ctrl.onTryItGrab = function () {
+  ctrl.onTryItGrab = () => {
     const inputDomain = ctrl.domainFormCmp.querySelector('input[type="text"]');
-    const value = inputDomain.value;
+    const { value } = inputDomain;
 
     if (!value) {
       ctrl.$emit('error', 'No domain provided.');
@@ -31,7 +31,6 @@ module.exports = (Controller) => {
       if (err) {
         error(err);
         ctrl.$emit('error', 'General UI error.');
-        return false;
       }
 
       switch (status) {
