@@ -6,8 +6,10 @@ module.exports = (Controller) => {
   const ctrl = new Controller(nameCtrl);
 
   ctrl.$load(({ live }) => {
-    if (!live && !window.ga) {
-      warning('Google Analytics module not found.');
+    if (!window.ga) {
+      if (!live) {
+        warning('Google Analytics module not found.');
+      }
       return;
     }
 
