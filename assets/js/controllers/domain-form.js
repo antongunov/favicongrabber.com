@@ -1,4 +1,4 @@
-const extractDomain = require('./modules/extract-domain');
+const extractDomain = require('../utils/extract-domain');
 const request = require('./modules/request');
 const error = require('../utils/error');
 
