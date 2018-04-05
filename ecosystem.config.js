@@ -1,11 +1,11 @@
-const dotEnv = require('dotenv').config();
+const { parsed } = require('dotenv').config();
 
 module.exports = {
   apps: [
     {
-      name: 'favicongrabber.com',
+      name: parsed.NGINX_SERVER_NAME,
       script: 'server/',
-      env: dotEnv.parsed,
+      env: parsed,
     },
   ],
 };
