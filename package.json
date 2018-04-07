@@ -73,6 +73,7 @@
     "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.8",
+    "jest": "^22.4.3",
     "mocha": "^5.0.0",
     "mustache": "^2.3.0",
     "npm-run-all": "^4.1.1",
