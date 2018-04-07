@@ -1,16 +1,16 @@
 {
-  "extends": "airbnb-base",
   "env": {
     "browser": true,
+    "jest": true,
     "mocha": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
+  "extends": "airbnb-base",
   "rules": {
     "import/no-extraneous-dependencies": [ "error", {
       "devDependencies": [
-        "gulpfile.js",
         "gulp/**",
+        "gulpfile.js",
         "test/**",
         "webpack.config.js"
       ]
