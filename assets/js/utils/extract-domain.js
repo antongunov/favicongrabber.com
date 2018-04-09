@@ -23,6 +23,10 @@ const rcut = (str, of) => {
  * @returns {string}
  */
 module.exports = (url) => {
+  if (url == null) {
+    throw new Error('The url parameter is required.');
+  }
+
   // removes whitespace from both ends of a URL
   let next = url.trim();
 
