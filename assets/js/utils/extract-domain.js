@@ -18,8 +18,10 @@ const rcut = (str, of) => {
 
 /**
  * Extract a domain name from a URL.
+ *
+ * @param {string} url
+ * @returns {string}
  */
-
 module.exports = (url) => {
   // removes whitespace from both ends of a URL
   let next = url.trim();
