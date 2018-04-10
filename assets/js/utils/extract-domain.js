@@ -27,8 +27,7 @@ module.exports = (url) => {
     throw new Error('The url parameter is required.');
   }
 
-  // removes whitespace from both ends of a URL
-  let next = url.trim();
+  let next = url;
 
   // https://user:pass@sub.host.com:8080/p/a/t/h?query=string#has
   next = lcut(next, '//');

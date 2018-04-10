@@ -9,7 +9,10 @@ module.exports = (Controller) => {
 
   ctrl.onTryItGrab = () => {
     const inputDomain = ctrl.domainFormCmp.querySelector('input[type="text"]');
-    const { value } = inputDomain;
+    let { value } = inputDomain;
+
+    // @todo write a test: removes whitespace
+    value = value.trim();
 
     if (!value) {
       ctrl.$emit('error', 'No domain provided.');
