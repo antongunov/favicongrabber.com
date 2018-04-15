@@ -35,3 +35,8 @@ it('url has a protocol and a path', () => {
   expect(extractDomain(`https://${EXAMPLE_COM}/about`))
     .toEqual(EXAMPLE_COM);
 });
+
+it('url has a protocol and path with multiple slashes', () => {
+  expect(extractDomain(`https://${EXAMPLE_COM}///about`))
+    .toEqual(EXAMPLE_COM);
+});

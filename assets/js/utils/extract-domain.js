@@ -30,7 +30,7 @@ module.exports = (url) => {
   let next = url;
 
   // https://user:pass@sub.host.com:8080/p/a/t/h?query=string#has
-  next = lcut(next, '//');
+  next = lcut(next, '://');
   // user:pass@sub.host.com:8080/p/a/t/h?query=string#has
   next = rcut(next, '/');
   // user:pass@sub.host.com:8080
