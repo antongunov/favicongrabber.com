@@ -6,6 +6,11 @@ it('url parameter is required', () => {
   expect(() => extractDomain()).toThrow(/required/);
 });
 
+it('url is a domain', () => {
+  expect(extractDomain(EXAMPLE_COM))
+    .toEqual(EXAMPLE_COM);
+});
+
 it('url has a port number', () => {
   expect(extractDomain(`${EXAMPLE_COM}:8080`))
     .toEqual(EXAMPLE_COM);
