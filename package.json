@@ -64,6 +64,7 @@
     "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.12",
     "cssnano": "^3.10.0",
+    "cypress": "^2.1.0",
     "eslint": "^4.16.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.6.1",
