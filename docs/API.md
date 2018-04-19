@@ -2,9 +2,9 @@
 
 ## Overview
 
-[Favicon Grabber](http://favicongrabber.com/) API is simple and has the one endpoint. The API does not require authentication but has the following restrictions: 100 requests per minute from one IP address and each API request should specify a valid `User-Agent` header.
+[Favicon Grabber](https://favicongrabber.com/) API is simple and has the one endpoint. The API does not require authentication but has the following restrictions: 100 requests per minute from one IP address and each API request should specify a valid `User-Agent` header.
 
-The root endpoint for the API is [http://favicongrabber.com/api](http://favicongrabber.com/api?pretty=true) and all responses are returned as JSON(P) over HTTP.
+The root endpoint for the API is [https://favicongrabber.com/api](https://favicongrabber.com/api?pretty=true) and all responses are returned as JSON(P) over HTTP.
 
 The API supports requests and responses using [Cross-Origin Resource Sharing](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) so you can send [XHR](https://en.wikipedia.org/wiki/XMLHttpRequest) requests from browsers using a client-side web application served from any domain.
 
@@ -12,7 +12,7 @@ The API supports requests and responses using [Cross-Origin Resource Sharing](ht
 
 In order to grab favicons for a website send a `GET` request to the API endpoint `/api/grab/:domain`, where `:domain` is a required parameter that should be equal to the valid [domain name syntax](https://en.wikipedia.org/wiki/Domain_Name_System#Domain_name_syntax). 
 
-For instance, to grab favicons from [github.com](https://github.com/) domain open [http://favicongrabber.com/api/grab/github.com](http://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON response:
+For instance, to grab favicons from [github.com](https://github.com/) domain open [https://favicongrabber.com/api/grab/github.com](https://favicongrabber.com/api/grab/github.com?pretty=true) in your favorite browser and you must see next JSON response:
 
 ```json
 {
