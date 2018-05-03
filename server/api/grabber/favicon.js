@@ -1,5 +1,5 @@
 const request = require('./request.conf');
-const URL = require('url').URL;
+const { URL } = require('url');
 
 module.exports = ($, done) => {
   const url = new URL('/favicon.ico', $.baseUrl).href;

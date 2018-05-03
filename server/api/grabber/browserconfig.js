@@ -6,7 +6,7 @@ module.exports = ($, done) => {
   if (tileImage) {
     icons.push({
       src: tileImage,
-    })
+    });
   }
 
   return done(null, icons);
