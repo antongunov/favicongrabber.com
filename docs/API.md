@@ -56,3 +56,11 @@ The API uses HTTP response codes to indicate API errors. All error messages have
   "error": "Unresolved domain name."
 }
 ```
+
+## Ecosystem
+
+Available third party modules (using [favicongrabber](favicongrabber.com) APIs)
+
+-   [favicongrab](https://github.com/anubhavsrivastava/favicongrab) - A module for fetching Favicon of any web site.
+-   [favicon-downloader](https://github.com/anubhavsrivastava/favicon-downloader) - A module for downloading Favicon of any web site.
+-   [favicon-downloader-cli](https://github.com/anubhavsrivastava/favicon-downloader-cli) - CLI for favicon-downloader module
