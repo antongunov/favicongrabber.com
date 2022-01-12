@@ -51,7 +51,7 @@
     "font-awesome": "^4.7.0",
     "include-media": "^1.4.9",
     "is-domain-name": "^1.0.1",
-    "markdown-it": "^8.3.1",
+    "markdown-it": "^12.3.2",
     "markdown-it-prism": "^1.1.1",
     "newrelic": "^2.0.2",
     "normalize-url": "^2.0.1",
